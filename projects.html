@@ -3,55 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects Archive - Husnain Haider</title>
+<title>Projects — Husnain Haider | Unity & XR Developer</title>
+<meta name="description" content="Browse 50+ game development and XR projects by Husnain Haider — including multiplayer FPS, MMORPGs, AR experiences, survival games, hyper-casual titles, and more. Built with Unity3D, C#, Photon, and AR Foundation.">
+<meta name="keywords" content="Husnain Haider projects, Unity games, XR projects, AR development, multiplayer FPS, MMORPG, game portfolio, Berlin developer">
+<meta name="author" content="Husnain Haider">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnain.site/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://husnain.site/projects.html">
+<meta property="og:title" content="Projects — Husnain Haider | Unity & XR Developer">
+<meta property="og:description" content="Browse 50+ game development and XR projects by Husnain Haider. Unity3D, C#, AR/XR, multiplayer, mobile, and more.">
+<meta property="og:image" content="https://husnain.site/assets/photo.jpg">
 <link rel="icon" type="image/jpeg" href="assets/photo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
-  --bg: #0C0C0F;
-  --bg-alt: #131318;
-  --bg-card: #18181E;
-  --text: #EAEAEC;
-  --text-muted: #8B8B95;
-  --accent: #6C63FF;
-  --accent-glow: rgba(108, 99, 255, 0.15);
-  --accent-secondary: #00D4AA;
-  --border: #2A2A35;
-  --border-hover: #3A3A48;
+  --bg: #0C0C0F; --bg-alt: #131318; --bg-card: #18181E;
+  --text: #EAEAEC; --text-muted: #8B8B95;
+  --accent: #6C63FF; --accent-glow: rgba(108,99,255,0.15); --accent-secondary: #00D4AA;
+  --border: #2A2A35; --border-hover: #3A3A48;
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
   --mono: 'JetBrains Mono', monospace;
-  --radius: 14px;
-  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 14px; --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
 }
-
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: var(--sans);
-  background:
-    radial-gradient(circle at top right, rgba(108, 99, 255, 0.12), transparent 24rem),
-    radial-gradient(circle at bottom left, rgba(0, 212, 170, 0.08), transparent 28rem),
-    var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--sans); background: var(--bg); color: var(--text);
+  line-height: 1.7; -webkit-font-smoothing: antialiased;
 }
-
 ::selection { background: var(--accent); color: #fff; }
 a { color: inherit; text-decoration: none; }
-button { font: inherit; }
+button { font: inherit; cursor: pointer; }
 .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
 
+/* NAV */
 nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(12, 12, 15, 0.82);
+  background: rgba(12,12,15,0.82);
   backdrop-filter: blur(24px) saturate(1.2);
-  border-bottom: 1px solid rgba(42, 42, 53, 0.5);
+  border-bottom: 1px solid rgba(42,42,53,0.5);
 }
 nav .container {
-  min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 68px; display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem;
 }
 .nav-logo {
   position: relative; display: inline-flex; align-items: center; gap: 0.65rem;
@@ -63,11 +59,10 @@ nav .container {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0;
   height: 1px; border-radius: 999px;
   background: linear-gradient(90deg, transparent, var(--accent), var(--accent-secondary), transparent);
-  background-size: 200% 100%;
-  animation: logoBeam 4.8s linear infinite;
+  background-size: 200% 100%; animation: logoBeam 4.8s linear infinite;
 }
 .nav-logo-main {
-  background: linear-gradient(120deg, #ffffff 0%, #cfcdfd 35%, #8ef1df 70%, #ffffff 100%);
+  background: linear-gradient(120deg, #fff 0%, #cfcdfd 35%, #8ef1df 70%, #fff 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: logoShift 5.5s ease-in-out infinite;
@@ -83,39 +78,25 @@ nav .container {
 .nav-logo-tag::before {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 48%, transparent 100%);
-  transform: translateX(-140%);
-  animation: logoSweep 3.8s ease-in-out infinite;
+  transform: translateX(-140%); animation: logoSweep 3.8s ease-in-out infinite;
 }
 .nav-logo-tag span { position: relative; z-index: 1; }
 .nav-actions { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
-
 .btn-primary, .btn-secondary {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-  padding: 0.82rem 1.4rem; border-radius: 8px; font-size: 0.84rem;
-  transition: var(--transition); white-space: nowrap;
+  padding: 0.7rem 1.2rem; border-radius: 8px; font-size: 0.82rem;
+  transition: var(--transition); white-space: nowrap; border: none;
 }
-.btn-primary {
-  background: var(--accent); color: #fff; border: 1px solid transparent; font-weight: 600;
-}
+.btn-primary { background: var(--accent); color: #fff; font-weight: 600; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
-.btn-secondary {
-  border: 1px solid var(--border); color: var(--text); font-weight: 500;
-}
+.btn-secondary { border: 1px solid var(--border); color: var(--text); font-weight: 500; background: transparent; }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-@keyframes logoShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-@keyframes logoSweep {
-  0%, 18% { transform: translateX(-140%); }
-  42%, 100% { transform: translateX(140%); }
-}
-@keyframes logoBeam {
-  0% { background-position: 200% 50%; }
-  100% { background-position: 0% 50%; }
-}
+@keyframes logoShift { 0%,100%{background-position:0% 50%}50%{background-position:100% 50%} }
+@keyframes logoSweep { 0%,18%{transform:translateX(-140%)}42%,100%{transform:translateX(140%)} }
+@keyframes logoBeam { 0%{background-position:200% 50%}100%{background-position:0% 50%} }
 
+/* HERO */
 .archive-hero { padding: 5rem 0 3rem; }
 .section-label {
   font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
@@ -123,165 +104,84 @@ nav .container {
   margin-bottom: 0.8rem; display: inline-block;
 }
 .hero-grid {
-  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr); gap: 2rem; align-items: end;
+  display: grid; grid-template-columns: minmax(0,1.4fr) minmax(280px,0.9fr); gap: 2rem; align-items: end;
 }
 .hero-copy h1 {
-  font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4rem);
+  font-family: var(--serif); font-size: clamp(2.4rem,5vw,3.5rem);
   letter-spacing: -0.03em; line-height: 1.06; font-weight: 400; margin-bottom: 1rem;
 }
-.hero-copy p {
-  max-width: 720px; color: var(--text-muted); font-size: 1rem; font-weight: 300;
-}
+.hero-copy p { max-width: 720px; color: var(--text-muted); font-size: 1rem; font-weight: 300; }
 .archive-summary {
-  background: rgba(24, 24, 30, 0.75);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
+  background: rgba(24,24,30,0.75); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
 }
-.summary-row {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
-}
+.summary-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
 .summary-item {
-  padding: 1rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.04);
 }
-.summary-item strong {
-  display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--accent);
-}
-.summary-item span {
-  font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;
-}
-.archive-note {
-  margin-top: 1rem; color: var(--text-muted); font-size: 0.82rem;
-}
+.summary-item strong { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--accent); }
+.summary-item span { font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
+/* GRID */
 .archive-section { padding: 1rem 0 5rem; }
-.archive-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;
-}
-
+.archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.25rem; }
 .archive-card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
+  background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);
+  overflow: hidden; transition: var(--transition); display: flex; flex-direction: column;
 }
 .archive-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-.archive-card:target {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(108, 99, 255, 0.35), 0 20px 60px rgba(0, 0, 0, 0.25);
-}
-
 .project-preview {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #111118 0%, #181824 100%);
-  overflow: hidden;
+  position: relative; aspect-ratio: 16/10;
+  background: linear-gradient(135deg, #111118, #181824); overflow: hidden;
 }
-.project-preview iframe,
-.project-preview img {
-  width: 100%; height: 100%; border: 0; display: block; object-fit: cover;
-}
+.project-preview iframe { width: 100%; height: 100%; border: 0; display: block; }
 .preview-tag {
-  position: absolute; top: 1rem; left: 1rem;
-  z-index: 2; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em;
+  position: absolute; top: 1rem; left: 1rem; z-index: 2;
+  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em;
   color: var(--accent); background: var(--accent-glow);
-  padding: 0.28rem 0.65rem; border-radius: 5px; border: 1px solid rgba(108, 99, 255, 0.18);
+  padding: 0.28rem 0.65rem; border-radius: 5px; border: 1px solid rgba(108,99,255,0.18);
 }
 .project-placeholder {
-  width: 100%; height: 100%;
-  display: grid; place-items: center;
-  padding: 2rem;
-  background:
-    linear-gradient(140deg, rgba(108, 99, 255, 0.12), transparent 55%),
-    linear-gradient(220deg, rgba(0, 212, 170, 0.1), transparent 60%);
+  width: 100%; height: 100%; display: grid; place-items: center; padding: 2rem;
+  background: linear-gradient(140deg, rgba(108,99,255,0.12), transparent 55%),
+              linear-gradient(220deg, rgba(0,212,170,0.1), transparent 60%);
 }
 .placeholder-inner {
   width: 100%; height: 100%;
-  border: 1px dashed rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.65rem;
+  border: 1px dashed rgba(255,255,255,0.12); border-radius: 18px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;
   color: var(--text-muted); text-align: center;
 }
-.placeholder-kicker {
-  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
-}
-.placeholder-title {
-  color: var(--text); font-size: 1.05rem; font-weight: 600; line-height: 1.3;
-}
-.placeholder-meta {
-  font-size: 0.78rem;
-}
-
+.placeholder-icon { font-size: 2rem; opacity: 0.5; }
+.placeholder-title { color: var(--text); font-size: 1rem; font-weight: 600; }
 .project-body {
-  padding: 1.4rem;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  padding: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1;
 }
-.project-head {
-  display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-bottom: 0.75rem;
-}
-.project-index {
-  font-family: var(--mono); font-size: 0.72rem; color: var(--accent);
-}
-.project-body h2 {
-  font-size: 1.02rem; line-height: 1.35; font-weight: 600;
-}
-.project-body p {
-  font-size: 0.82rem; color: var(--text-muted); font-weight: 300;
-  line-height: 1.7; margin-bottom: 1rem; flex: 1;
-}
-.project-tech {
-  display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem;
-}
+.project-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+.project-index { font-family: var(--mono); font-size: 0.68rem; color: var(--accent); margin-bottom: 0.2rem; }
+.project-body h2 { font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+.project-body p { font-size: 0.82rem; color: var(--text-muted); font-weight: 300; line-height: 1.6; flex: 1; }
+.project-tech { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .project-tech span {
-  font-family: var(--mono); font-size: 0.65rem; padding: 0.22rem 0.55rem;
-  background: rgba(255, 255, 255, 0.04); border-radius: 4px; color: var(--text-muted);
+  font-family: var(--mono); font-size: 0.65rem; padding: 0.2rem 0.5rem;
+  background: rgba(255,255,255,0.04); border-radius: 4px; color: var(--text-muted);
   border: 1px solid var(--border);
 }
-.media-switch {
-  display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.9rem;
-}
-.media-switch button {
-  padding: 0.45rem 0.72rem; border-radius: 999px;
-  border: 1px solid var(--border); background: transparent; color: var(--text-muted);
-  font-size: 0.74rem; cursor: pointer; transition: var(--transition);
-}
-.media-switch button:hover,
-.media-switch button.active {
-  border-color: rgba(108, 99, 255, 0.3);
-  color: var(--text);
-  background: rgba(108, 99, 255, 0.1);
-}
-.project-links {
-  display: flex; gap: 1rem; flex-wrap: wrap;
-}
+.project-links { display: flex; gap: 0.75rem; margin-top: 0.4rem; }
 .project-links a {
   font-size: 0.78rem; font-weight: 500; color: var(--accent);
-  transition: var(--transition); display: inline-flex; align-items: center; gap: 0.3rem;
+  transition: var(--transition);
 }
 .project-links a:hover { color: var(--accent-secondary); }
 
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 0 3rem;
-}
-footer p { color: var(--text-muted); font-size: 0.78rem; }
+/* FOOTER */
+footer { padding: 3rem 0; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.78rem; color: var(--text-muted); }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 680px) {
-  nav .container { padding-top: 0.9rem; padding-bottom: 0.9rem; align-items: start; }
-  .nav-logo { font-size: 0.84rem; gap: 0.45rem; }
-  .nav-logo-tag { font-size: 0.55rem; letter-spacing: 0.12em; padding: 0.18rem 0.42rem; }
-  .nav-actions { width: 100%; }
   .summary-row { grid-template-columns: 1fr; }
-  .archive-hero { padding-top: 3.5rem; }
+  .archive-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -289,13 +189,13 @@ footer p { color: var(--text-muted); font-size: 0.78rem; }
 
 <nav>
   <div class="container">
-    <a href="index.html" class="nav-logo" aria-label="Husnain's Portfolio">
+    <a href="index.html" class="nav-logo" aria-label="Back to home">
       <span class="nav-logo-main">Husnain's Portfolio</span>
       <span class="nav-logo-tag"><span>XR / Unity</span></span>
     </a>
     <div class="nav-actions">
-      <a href="index.html#projects" class="btn-secondary">Back to Home</a>
-      <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="btn-primary">YouTube Archive</a>
+      <a href="index.html" class="btn-secondary">← Back to Home</a>
+      <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="btn-primary">🎬 YouTube Channel</a>
     </div>
   </div>
 </nav>
@@ -305,25 +205,15 @@ footer p { color: var(--text-muted); font-size: 0.78rem; }
     <span class="section-label">Projects Archive</span>
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>50 project slots on a separate page, with image and video options built in.</h1>
-        <p>This page keeps your homepage compact and gives you a dedicated archive for the full portfolio. Each card below already includes media toggles, tech tags, and action links, so you can replace the placeholder content with real project assets when you are ready.</p>
+        <h1>6+ years of shipped games, AR apps &amp; real-time systems</h1>
+        <p>From multiplayer FPS titles and MMORPGs to industrial AR training and hyper-casual mobile games — here's everything I've built with Unity, C#, and a lot of late nights.</p>
       </div>
       <aside class="archive-summary">
         <div class="summary-row">
-          <div class="summary-item">
-            <strong>50</strong>
-            <span>Project Cards</span>
-          </div>
-          <div class="summary-item">
-            <strong>3</strong>
-            <span>Media Modes</span>
-          </div>
-          <div class="summary-item">
-            <strong>1</strong>
-            <span>Archive Page</span>
-          </div>
+          <div class="summary-item"><strong>90+</strong><span>Projects</span></div>
+          <div class="summary-item"><strong>6+</strong><span>Years</span></div>
+          <div class="summary-item"><strong>4</strong><span>Companies</span></div>
         </div>
-        <p class="archive-note">Media buttons switch each card between overview, image, and embedded video. The data lives in one script block near the bottom of this file.</p>
       </aside>
     </div>
   </div>
@@ -337,192 +227,374 @@ footer p { color: var(--text-muted); font-size: 0.78rem; }
 
 <footer>
   <div class="container">
-    <p>Projects archive for Husnain Haider. Replace the placeholder text, images, and video links in <code>projects.html</code> as you add final portfolio assets.</p>
+    <p>© 2026 Husnain Haider · <a href="index.html" style="color:var(--accent);">Back to Portfolio</a> · <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" style="color:var(--accent);">YouTube</a> · <a href="https://linkedin.com/in/husnain-haider0" target="_blank" style="color:var(--accent);">LinkedIn</a></p>
   </div>
 </footer>
 
 <script>
-const projectTemplates = [
-  {
-    tag: 'WEBAR',
-    title: 'WebAR City Guide',
-    description: 'Location-aware storytelling flow with lightweight content loading, guided checkpoints, and production-friendly CMS hooks for fast iteration.',
-    tech: ['Unity3D', 'WebAR', 'CMS', 'Mobile UX'],
-    accent: 'Spatial Storytelling'
-  },
-  {
-    tag: 'MULTIPLAYER',
-    title: 'Tactical Arena',
-    description: 'Real-time multiplayer combat slice with replicated gameplay events, responsive hit feedback, and scalable client-side performance tuning.',
-    tech: ['Unity3D', 'C#', 'Photon', 'Netcode'],
-    accent: 'Competitive Systems'
-  },
-  {
-    tag: 'XR TRAINING',
-    title: 'Industrial XR Trainer',
-    description: 'Structured training scenario with anchored overlays, procedural checkpoints, and guided feedback loops for industrial learning flows.',
-    tech: ['XR', 'ARCore', 'ARKit', 'Tooling'],
-    accent: 'Guided Training'
-  },
-  {
-    tag: 'AI AGENT',
-    title: 'Spatial AI Assistant',
-    description: 'Prototype assistant interface combining contextual prompts, scene metadata, and interaction cues for mixed reality exploration.',
-    tech: ['Unity', 'AI', 'RAG', 'Prototype'],
-    accent: 'Contextual Agent'
-  },
-  {
-    tag: 'MOBILE GAME',
-    title: 'Runner Combat Loop',
-    description: 'Fast mobile gameplay loop with encounter pacing, reward progression, stylized VFX, and frame-budget aware combat feedback.',
-    tech: ['Unity3D', 'Animator', 'VFX', 'Mobile'],
-    accent: 'Session-Based Design'
-  },
-  {
-    tag: 'VISUAL FX',
-    title: 'Shader Showcase',
-    description: 'Rendering study focused on stylized lighting, layered materials, and author-friendly shader controls for multiple art directions.',
-    tech: ['URP', 'Shader Graph', 'Lighting', 'Optimization'],
-    accent: 'Realtime Rendering'
-  },
-  {
-    tag: 'WORLD BUILDING',
-    title: 'Open World Module',
-    description: 'Environment slice with streaming-friendly layouts, modular props, and pipeline rules that support larger world assembly.',
-    tech: ['Worldbuilding', 'Addressables', 'Streaming', 'Tools'],
-    accent: 'Large-Scale Layouts'
-  },
-  {
-    tag: 'EDTECH',
-    title: 'Interactive Learning App',
-    description: 'Educational interaction layer with progress tracking, guided challenges, and content blocks designed for repeatable lessons.',
-    tech: ['Unity', 'UI Systems', 'Analytics', 'Content'],
-    accent: 'Learning Design'
-  },
-  {
-    tag: 'SIMULATION',
-    title: 'Operations Simulator',
-    description: 'Simulation-focused project scaffold with state-driven workflows, modular scenario setup, and operator-facing interface feedback.',
-    tech: ['Simulation', 'State Machines', 'UI', 'Performance'],
-    accent: 'Process Modeling'
-  },
-  {
-    tag: 'ADVENTURE',
-    title: 'Narrative Quest',
-    description: 'Story-led gameplay block with timeline-driven beats, interactive trigger logic, and cinematic pacing for exploration segments.',
-    tech: ['Timeline', 'Cinematics', 'Quest Systems', 'Unity3D'],
-    accent: 'Narrative Flow'
-  }
-];
+// Real project data based on Husnain's actual portfolio
+const projects = [
+  // ── FEATURED / SHIPPED PROJECTS ──
+  { tag: 'MULTIPLAYER FPS', title: 'Line of Control (LOC)', icon: '🏹',
+    desc: 'Multiplayer FPS with Photon networking, physically based lighting, modular weapon VFX, recoil systems, and auto-LOD tools. Optimized for stable frame pacing on mid-range hardware.',
+    tech: ['Unity3D', 'C#', 'Photon', 'URP', 'Networking'],
+    videoId: 'PA4sbqfedqU', ytLink: 'https://www.youtube.com/watch?v=PA4sbqfedqU' },
+  { tag: 'MMORPG', title: 'Akrasin MMORPG', icon: '⚔️',
+    desc: 'Massively multiplayer RPG with quest/dialogue tools, spell FX, shader-driven fog, animated UI widgets, and designer-friendly Timeline content workflows. 200+ concurrent players.',
+    tech: ['Unity3D', 'C#', 'Multiplayer', 'Timeline', 'AI'],
+    videoId: '3QN_avy_Hl0', ytLink: 'https://www.youtube.com/watch?v=3QN_avy_Hl0' },
+  { tag: '3D ADVENTURE', title: 'The Sands of Abzu', icon: '🏝️',
+    desc: 'Cel-shaded adventure game with stylized water, cinematic camera logic, interactable shaders, puzzle systems, and custom AI behavior trees.',
+    tech: ['Unity3D', 'Cel Shading', 'Timeline', 'AI', 'Shaders'],
+    videoId: 'QQuzqS29sr8', ytLink: 'https://www.youtube.com/watch?v=QQuzqS29sr8' },
+  { tag: 'SURVIVAL', title: 'Dead Island Survival', icon: '🧟',
+    desc: 'Multiplayer survival with procedural weather, ECS architecture, runtime lighting tools, biome blending, and designer-ready FX presets. 500+ entities at 60fps.',
+    tech: ['Unity3D', 'Photon', 'ECS', 'Procedural'],
+    videoId: '3GjJghptq3o', ytLink: 'https://www.youtube.com/watch?v=3GjJghptq3o' },
+  { tag: 'RPG ACTION', title: 'Ninja Tashani', icon: '🥷',
+    desc: '3D RPG action game with sword trails, combo FX, layered animation controllers, blend trees, and a scalable HUD with scriptable events.',
+    tech: ['Unity3D', 'C#', 'Animator', 'VFX', 'Combat'],
+    ytLink: 'https://www.youtube.com/@Hucnain/videos' },
+  { tag: 'AR EXPERIENCE', title: 'AR Treasure Hunt', icon: '🗺️',
+    desc: 'Large-area AR exploration with GPS anchoring, surface detection, responsive outdoor UX, and event-bus architecture for modular features.',
+    tech: ['Unity3D', 'ARKit', 'ARCore', 'Addressables', 'GPS'],
+    ytLink: 'https://www.youtube.com/@Hucnain/videos' },
+  { tag: 'ACTION RPG', title: 'Slash Verse', icon: '⚡',
+    desc: 'Responsive combat and progression systems with profiling-driven tuning. Platform-specific SDK integration and 60fps across 5 device tiers.',
+    tech: ['Unity3D', 'C#', 'Combat', 'SDK Integration'],
+    ytLink: 'https://www.youtube.com/@Hucnain/videos' },
+  { tag: 'HYPER CASUAL', title: 'Hyper Casual Collection', icon: '🎯',
+    desc: 'Fast-paced hyper-casual mechanics for short session gameplay loops. Touch input, feedback systems, ads/analytics integration, retention hooks.',
+    tech: ['Unity3D', 'Mobile', 'Ads SDK', 'Analytics'],
+    ytLink: 'https://www.youtube.com/@Hucnain/videos' },
+  // ── WEBAR / XR PROJECTS ──
+  { tag: 'WEBAR', title: 'WebAR City Guide', icon: '🌆',
+    desc: 'Location-aware AR storytelling built at Zaubar. Vue.js frontend with Unity AR Foundation backend, Directus CMS for fast mobile content delivery.',
+    tech: ['Unity3D', 'WebAR', 'Vue.js', 'CMS', 'AR Foundation'] },
+  { tag: 'XR TRAINING', title: 'Bosch AR Training App', icon: '🏭',
+    desc: 'Industrial AR training application using URP shaders, robust lighting, ARKit/ARCore fallbacks. Built custom editor tools for asset alignment and anchor debugging.',
+    tech: ['Unity3D', 'ARKit', 'ARCore', 'URP', 'Editor Tools'] },
+  { tag: 'AI SPATIAL', title: 'AI Spatial Agent Prototype', icon: '🤖',
+    desc: 'Prototyped AI spatial agents with RAG and computer vision for reactive, world-aware XR interactions at Zaubar.',
+    tech: ['Unity', 'AI', 'RAG', 'Computer Vision', 'XR'] },
+  { tag: 'NATIVE PLUGIN', title: 'Unity Native Plugins Suite', icon: '🔌',
+    desc: 'Native Unity plugins for Android, iOS, and Web with HLS video playback. Cross-platform bridge architecture.',
+    tech: ['Unity', 'Android', 'iOS', 'WebGL', 'Native'] },
+  // ── TOOLS & SYSTEMS ──
+  { tag: 'EDITOR TOOLS', title: 'Asset Pipeline Toolkit', icon: '🛠️',
+    desc: 'Blender→Unity pipeline with Addressables and import rules for deterministic, reliable content builds across environments.',
+    tech: ['Unity', 'Addressables', 'Editor Tooling', 'Pipeline'] },
+  { tag: 'PROFILING', title: 'Performance Profiling Suite', icon: '📊',
+    desc: 'CPU/GPU profiling tools, memory optimization, and culling strategies to cut frame costs while preserving visual clarity.',
+    tech: ['Unity', 'Profiling', 'Memory', 'GPU', 'Optimization'] },
+  { tag: 'VFX SYSTEM', title: 'Combat VFX Library', icon: '✨',
+    desc: 'Stylized shaders, combat VFX, and scalable render paths hitting frame budgets across diverse mobile devices.',
+    tech: ['Unity', 'Shader Graph', 'VFX', 'URP', 'Mobile'] },
+  { tag: 'UI FRAMEWORK', title: 'Data-Driven UI System', icon: '🖥️',
+    desc: 'EvolveUI-style data-driven UI framework with animated widgets, state feedback for inventory, crafting, and quest systems.',
+    tech: ['Unity', 'UI Toolkit', 'Data-Driven', 'Animation'] },
+  { tag: 'ANIMATION', title: 'Animation Pipeline Tools', icon: '🎬',
+    desc: 'Standardized UI and gameplay animation with Timeline and Animator graphs. Artist-friendly preview and variant management.',
+    tech: ['Unity', 'Timeline', 'Animator', 'Editor Tools'] },
+  { tag: 'NETWORKING', title: 'Multiplayer Framework', icon: '🌐',
+    desc: 'Scalable multiplayer systems supporting 200+ concurrent players with efficient network serialization across platforms.',
+    tech: ['Unity', 'Photon', 'Netcode', 'State Sync'] },
+  // ── MOBILE GAMES ──
+  { tag: 'MOBILE RUNNER', title: 'Endless Runner: Shadow Dash', icon: '🏃',
+    desc: 'Fast mobile gameplay loop with encounter pacing, reward progression, stylized VFX, and frame-budget aware combat feedback.',
+    tech: ['Unity3D', 'Mobile', 'VFX', 'Monetization'] },
+  { tag: 'PUZZLE GAME', title: 'Crystal Match Puzzle', icon: '💎',
+    desc: 'Match-3 puzzle mechanics with particle effects, combo chains, and progressive difficulty. Optimized for low-end devices.',
+    tech: ['Unity3D', '2D', 'Mobile', 'Particles'] },
+  { tag: 'TOWER DEFENSE', title: 'Tower Defense: Last Stand', icon: '🏰',
+    desc: 'Tower defense with pathfinding AI, upgradeable towers, wave management, and performance-tuned for mobile hardware.',
+    tech: ['Unity3D', 'AI', 'NavMesh', 'Mobile'] },
+  { tag: 'RACING', title: 'Drift Circuit', icon: '🏎️',
+    desc: 'Arcade racing with physics-based drifting, procedural track elements, and cross-platform input handling.',
+    tech: ['Unity3D', 'Physics', 'Input System', 'Mobile'] },
+  { tag: 'PLATFORMER', title: '2D Platformer: Jump King', icon: '👾',
+    desc: 'Precision 2D platformer with tight controls, parallax scrolling, and hand-crafted level design with data-driven difficulty.',
+    tech: ['Unity3D', '2D', 'Tilemap', 'Animation'] },
+  { tag: 'SHOOTER', title: 'Top-Down Shooter: Neon Strike', icon: '🔫',
+    desc: 'Twin-stick shooter with enemy wave spawning, screen-shake feedback, neon visual effects, and leaderboard integration.',
+    tech: ['Unity3D', '2D', 'VFX', 'Firebase'] },
+  { tag: 'IDLE GAME', title: 'Idle Kingdom Builder', icon: '🏘️',
+    desc: 'Idle/incremental game with offline progression, prestige systems, and monetization hooks. Optimized memory for long sessions.',
+    tech: ['Unity3D', 'Mobile', 'Save System', 'Analytics'] },
+  { tag: 'CARD GAME', title: 'Battle Cards Online', icon: '🃏',
+    desc: 'Turn-based card battle system with deck building, multiplayer matchmaking, and animated card effects.',
+    tech: ['Unity3D', 'C#', 'Multiplayer', 'UI'] },
+  // ── RENDERING & SHADERS ──
+  { tag: 'SHADERS', title: 'Stylized Water Shader', icon: '🌊',
+    desc: 'Custom water shader with reflection masks, foam generation, and depth-based coloring for stylized environments.',
+    tech: ['Shader Graph', 'URP', 'HLSL', 'Rendering'] },
+  { tag: 'SHADERS', title: 'Cel Shading Pipeline', icon: '🎨',
+    desc: 'Complete cel-shading rendering pipeline with outline detection, shadow ramps, and emission states for interactive objects.',
+    tech: ['Unity', 'Shader Graph', 'Post-Processing', 'URP'] },
+  { tag: 'VFX', title: 'Spell Effects Library', icon: '🔥',
+    desc: 'Collection of spell and impact VFX with particle systems, shader-driven distortion, and GPU-instanced rendering.',
+    tech: ['VFX Graph', 'Particles', 'Shaders', 'GPU Instancing'] },
+  { tag: 'LIGHTING', title: 'Dynamic Lighting Study', icon: '💡',
+    desc: 'Real-time weather system with procedural fog, rain FX, and dynamic lighting tied to gameplay variables.',
+    tech: ['URP', 'Lighting', 'Fog', 'Procedural'] },
+  { tag: 'POST FX', title: 'Post-Processing Stack', icon: '📸',
+    desc: 'Custom post-processing effects including bloom, color grading, screen-space reflections, and grain overlays.',
+    tech: ['Post-Processing', 'URP', 'Rendering', 'Performance'] },
+  // ── AI & SYSTEMS ──
+  { tag: 'AI SYSTEM', title: 'Behavior Tree Framework', icon: '🧠',
+    desc: '8 AI behavior trees with state machines and clean interfaces. Modular enemy logic reducing debugging time by 50%.',
+    tech: ['C#', 'AI', 'Behavior Trees', 'State Machines'] },
+  { tag: 'AI COMBAT', title: 'Boss AI System', icon: '👹',
+    desc: 'Boss logic with telegraphs, VFX beats, and timing alignment for readable, fair encounters. Phase-based difficulty scaling.',
+    tech: ['Unity', 'C#', 'AI', 'Combat', 'Animation'] },
+  { tag: 'QUEST SYSTEM', title: 'Quest & Dialogue Tools', icon: '📜',
+    desc: 'Designer-friendly quest and dialogue tools with Timeline hooks and data assets. Content assembly without engineering bottlenecks.',
+    tech: ['Unity', 'ScriptableObjects', 'Timeline', 'Tools'] },
+  { tag: 'PROGRESSION', title: 'Progression & Reward System', icon: '📈',
+    desc: 'Scalable progression and reward systems with data-driven tuning, enabling safe content iteration without code changes.',
+    tech: ['C#', 'Data-Driven', 'Analytics', 'A/B Testing'] },
+  { tag: 'SAVE SYSTEM', title: 'Cross-Platform Save Manager', icon: '💾',
+    desc: 'Serialization system with cloud sync, migration support, and platform-specific storage adapters for iOS, Android, and PC.',
+    tech: ['C#', 'JSON', 'Cloud Save', 'Cross-Platform'] },
+  // ── MORE PROJECTS ──
+  { tag: 'SIMULATION', title: 'Physics Sandbox', icon: '⚙️',
+    desc: 'Physics-based simulation with ragdoll mechanics, destructible environments, and object pooling for 500+ simultaneous entities.',
+    tech: ['Unity', 'Physics', 'ECS', 'Object Pooling'] },
+  { tag: 'AR APP', title: 'AR Product Visualizer', icon: '📱',
+    desc: 'AR product placement app with surface detection, realistic lighting estimation, and gesture-based object manipulation.',
+    tech: ['ARKit', 'ARCore', 'Unity', 'Mobile'] },
+  { tag: 'WORLD BUILD', title: 'Open World Streaming', icon: '🗺️',
+    desc: 'Open world module with streaming-friendly layouts, modular props, and async scene loading for large map support.',
+    tech: ['Unity', 'Addressables', 'Streaming', 'LOD'] },
+  { tag: 'NETWORKING', title: 'Real-Time Chat System', icon: '💬',
+    desc: 'In-game real-time chat with channels, private messaging, and moderation tools. Integrated with multiplayer session management.',
+    tech: ['Unity', 'WebSocket', 'Photon', 'UI'] },
+  { tag: 'MOBILE GAME', title: 'Fruit Slice Frenzy', icon: '🍉',
+    desc: 'Hyper-casual fruit slicing game with juice physics, combo multipliers, and touch gesture recognition.',
+    tech: ['Unity3D', 'Mobile', '2D', 'Touch Input'] },
+  { tag: 'HORROR', title: 'Abandoned: Horror Demo', icon: '👻',
+    desc: 'First-person horror experience with dynamic audio, flashlight mechanics, AI stalker system, and atmospheric fog.',
+    tech: ['Unity3D', 'Audio', 'AI', 'Lighting'] },
+  { tag: 'SPORTS', title: 'Street Basketball', icon: '🏀',
+    desc: 'Arcade basketball with physics-based throwing, trick shots, and progressive difficulty. Cross-platform controls.',
+    tech: ['Unity3D', 'Physics', 'Mobile', 'Animation'] },
+  { tag: 'EDTECH', title: 'Interactive Learning App', icon: '📚',
+    desc: 'Educational interaction layer with progress tracking, guided challenges, and content blocks for repeatable lessons.',
+    tech: ['Unity', 'UI', 'Analytics', 'Content'] },
+  { tag: 'MULTIPLAYER', title: 'Co-op Dungeon Crawler', icon: '🏰',
+    desc: 'Cooperative dungeon crawler with procedural level generation, loot systems, and 4-player network synchronization.',
+    tech: ['Unity3D', 'Photon', 'Procedural', 'Co-op'] },
+  { tag: 'SANDBOX', title: 'Voxel Builder', icon: '🧱',
+    desc: 'Voxel-based building game with chunk-based rendering, save/load system, and real-time terrain modification.',
+    tech: ['Unity3D', 'C#', 'Mesh Generation', 'Voxels'] },
+  { tag: 'SHOOTER', title: 'Space Shooter: Nebula', icon: '🚀',
+    desc: 'Vertical scrolling space shooter with boss fights, power-up systems, and GPU-instanced bullet patterns.',
+    tech: ['Unity3D', '2D', 'Object Pooling', 'VFX'] },
+  { tag: 'STRATEGY', title: 'Hex Grid Strategy', icon: '🗡️',
+    desc: 'Turn-based strategy game on hex grid with fog of war, unit management, and AI opponent with difficulty levels.',
+    tech: ['Unity3D', 'C#', 'AI', 'Hex Grid'] },
+  { tag: 'AR GAME', title: 'AR Tower Defense', icon: '🏗️',
+    desc: 'AR tower defense placing towers on real surfaces. Surface detection, enemy pathfinding on AR plane, and gesture controls.',
+    tech: ['Unity3D', 'ARKit', 'ARCore', 'NavMesh'] },
+  { tag: 'PROTOTYPE', title: 'Procedural Terrain Engine', icon: '⛰️',
+    desc: 'Procedural terrain generation with noise-based heightmaps, biome blending, and LOD system for infinite worlds.',
+    tech: ['Unity3D', 'C#', 'Procedural', 'Compute Shaders'] },
 
-const videoIds = ['3QN_avy_Hl0', 'PA4sbqfedqU', 'QQuzqS29sr8', '3GjJghptq3o'];
-const projectData = Array.from({ length: 50 }, (_, index) => {
-  const template = projectTemplates[index % projectTemplates.length];
-  const number = String(index + 1).padStart(2, '0');
-  const videoId = videoIds[index % videoIds.length];
-  return {
-    id: `project-${number}`,
-    number,
-    tag: template.tag,
-    title: `${template.title} ${number}`,
-    accent: template.accent,
-    description: `${template.description} This card is ready for your own screenshots, clips, and project-specific links.`,
-    tech: [...template.tech, `Project ${number}`],
-    image: 'assets/photo.jpg',
-    imageAlt: `${template.title} ${number} preview`,
-    videoEmbed: `https://www.youtube.com/embed/${videoId}`,
-    videoWatch: `https://www.youtube.com/watch?v=${videoId}`
-  };
-});
+  // ── YOUTUBE PORTFOLIO PROJECTS ──
+  { tag: 'TOWER DEFENSE', title: 'Battle At Dawn — Top Down Strategy Tower Defense', icon: '🏰',
+    desc: 'Top-down strategy tower defense with wave management, upgradeable units, and strategic placement mechanics.',
+    tech: ['Unity3D', 'C#', 'Strategy', 'Tower Defense', 'AI'],
+    videoId: 'jpTxClyG7m4', ytLink: 'https://www.youtube.com/watch?v=jpTxClyG7m4' },
+  { tag: 'SIMULATION', title: 'Warehouse Simulator — Forklift Mission', icon: '🏭',
+    desc: 'Forklift simulation with physics-based driving, warehouse logistics, and mission-based objectives.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Simulation'],
+    videoId: 'ueGg2b-T43U', ytLink: 'https://www.youtube.com/watch?v=ueGg2b-T43U' },
+  { tag: 'ALIEN SHOOTER', title: 'Spider Alien — Alien Shooting', icon: '🕷️',
+    desc: 'Alien shooting game with enemy AI, wave-based spawning, VFX-driven combat feedback, and performance-tuned rendering.',
+    tech: ['Unity3D', 'C#', 'AI', 'Shooting', 'VFX'],
+    videoId: 'xAcmGLI7uIQ', ytLink: 'https://www.youtube.com/watch?v=xAcmGLI7uIQ' },
+  { tag: 'SPACE COMBAT', title: 'Space Combat — Spaceship Shooting Game', icon: '🚀',
+    desc: 'Spaceship shooting game with flight physics, projectile systems, enemy formations, and space environment rendering.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Space', 'Shooting'],
+    videoId: 'hxShVXe4rY0', ytLink: 'https://www.youtube.com/watch?v=hxShVXe4rY0' },
+  { tag: 'MULTIPLAYER SIM', title: 'TOP-G Crime Simulator — Multiplayer Server', icon: '🌆',
+    desc: 'Real-world simulator with multiplayer server support, open-world exploration, and synchronized player interactions.',
+    tech: ['Unity3D', 'Photon', 'Multiplayer', 'Open World'],
+    videoId: 'reOQsuX5VUQ', ytLink: 'https://www.youtube.com/watch?v=reOQsuX5VUQ' },
+  { tag: 'PC RPG', title: 'Slash Verse PC — Dead Caves Mission', icon: '⚔️',
+    desc: 'PC Fantasy RPG mission through dark cave environments with combat encounters, VFX-driven feedback, and atmospheric lighting.',
+    tech: ['Unity3D', 'C#', 'PC', 'RPG', 'Combat'],
+    videoId: 'g1waRWAkTeo', ytLink: 'https://www.youtube.com/watch?v=g1waRWAkTeo' },
+  { tag: 'PC RPG', title: 'Slash Verse PC — Dragon Village Mission', icon: '🐉',
+    desc: 'Fantasy action RPG village mission with dragon encounters, open exploration, and stylized polygon art direction.',
+    tech: ['Unity3D', 'C#', 'PC', 'RPG', 'Open World'],
+    videoId: '6xl0z9b3mIs', ytLink: 'https://www.youtube.com/watch?v=6xl0z9b3mIs' },
+  { tag: 'MOBILE RPG', title: 'Slash Verse Mobile — Sword Fighter RPG', icon: '📱',
+    desc: 'Mobile action sword fighter RPG with touch controls, responsive combat, and progression systems optimized for mobile hardware.',
+    tech: ['Unity3D', 'C#', 'Mobile', 'RPG', 'Touch Input'],
+    videoId: 'eY2bBb9syf4', ytLink: 'https://www.youtube.com/watch?v=eY2bBb9syf4' },
+  { tag: 'FANTASY RPG', title: 'Fantasy RPG — RPG Game With Effects', icon: '🗡️',
+    desc: 'RPG game with spell effects, combat systems, character progression, and stylized fantasy environments.',
+    tech: ['Unity3D', 'C#', 'RPG', 'VFX', 'Combat'],
+    videoId: 'b8Y7VbhS4R8', ytLink: 'https://www.youtube.com/watch?v=b8Y7VbhS4R8' },
+  { tag: 'FIGHTING', title: 'Samurai Ninja Warrior — Street Fighter', icon: '⛩️',
+    desc: 'Street fighter style combat with samurai/ninja characters, combo systems, and responsive input handling.',
+    tech: ['Unity3D', 'C#', 'Fighting', 'Animator', 'Combat'],
+    videoId: 'PPZTrUJBueg', ytLink: 'https://www.youtube.com/watch?v=PPZTrUJBueg' },
+  { tag: 'RACING', title: 'Retro Racer — Car Racing in Vintage', icon: '🏎️',
+    desc: 'Vintage-themed car racing game with retro aesthetics, physics-based handling, and track design.',
+    tech: ['Unity3D', 'C#', 'Racing', 'Physics', 'Retro'],
+    videoId: 'e3bSDsd_6T8', ytLink: 'https://www.youtube.com/watch?v=e3bSDsd_6T8' },
+  { tag: 'CASUAL', title: 'Pet Day Care', icon: '🐾',
+    desc: 'Pet care simulation game with interactive mini-games, grooming mechanics, and colorful 2D/3D art.',
+    tech: ['Unity3D', 'C#', 'Casual', 'Simulation'],
+    videoId: 'L3Z5b-8MDLE', ytLink: 'https://www.youtube.com/watch?v=L3Z5b-8MDLE' },
+  { tag: 'STUNT RACING', title: 'Mega Ramp Truck Stunts', icon: '🚛',
+    desc: 'Truck stunt game with mega ramps, physics-based vehicle mechanics, and spectacular aerial stunts.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Vehicles', 'Stunts'],
+    videoId: 'WSqxzhQ1F4s', ytLink: 'https://www.youtube.com/watch?v=WSqxzhQ1F4s' },
+  { tag: 'FARMING SIM', title: 'Farm House — Farming Simulator', icon: '🌾',
+    desc: 'Farming simulator with crop management, animal care, and seasonal gameplay loops.',
+    tech: ['Unity3D', 'C#', 'Simulation', 'Management'],
+    videoId: 'VQWKYTwuWQk', ytLink: 'https://www.youtube.com/watch?v=VQWKYTwuWQk' },
+  { tag: 'DRONE SIM', title: 'Drone Controller', icon: '🚁',
+    desc: 'Drone flight simulation with realistic physics, camera controls, and mission-based objectives.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Flight', 'Simulation'],
+    videoId: 'vZunNco4eX4', ytLink: 'https://www.youtube.com/watch?v=vZunNco4eX4' },
+  { tag: 'CASUAL', title: 'Ear Doctor — Day Care Game', icon: '👂',
+    desc: 'Day care medical mini-game with interactive tools, step-by-step procedures, and kid-friendly UI.',
+    tech: ['Unity3D', 'C#', 'Casual', '2D', 'UI'],
+    videoId: '4CfmVmLX6YA', ytLink: 'https://www.youtube.com/watch?v=4CfmVmLX6YA' },
+  { tag: 'THIRD PERSON', title: 'Dayz Gone — Third Person PC Game', icon: '🎯',
+    desc: 'Third-person PC game with survival mechanics, open-world exploration, and atmospheric post-apocalyptic environments.',
+    tech: ['Unity3D', 'C#', 'PC', 'Third Person', 'Survival'],
+    videoId: 'Y4TOSvgDNw0', ytLink: 'https://www.youtube.com/watch?v=Y4TOSvgDNw0' },
+  { tag: 'MULTIPLAYER FPS', title: 'Cartoon FPS Multiplayer Game', icon: '🔫',
+    desc: 'Stylized cartoon multiplayer FPS with networked gameplay, colorful environments, and fast-paced shooting.',
+    tech: ['Unity3D', 'Photon', 'Multiplayer', 'FPS', 'Cartoon'],
+    videoId: 'AzpyNTPsBoQ', ytLink: 'https://www.youtube.com/watch?v=AzpyNTPsBoQ' },
+  { tag: 'PUZZLE', title: 'Water Sort Bottles — Puzzle Game', icon: '🧪',
+    desc: 'Color sorting puzzle game with intuitive mechanics, progressive difficulty, and satisfying pour animations.',
+    tech: ['Unity3D', 'C#', 'Puzzle', '2D', 'Mobile'],
+    videoId: 'kX3vQqKzdr4', ytLink: 'https://www.youtube.com/watch?v=kX3vQqKzdr4' },
+  { tag: 'MAKEOVER', title: 'Ice Barbie — Makeover Game', icon: '❄️',
+    desc: 'Character makeover game with customization tools, styling mechanics, and interactive dress-up gameplay.',
+    tech: ['Unity3D', 'C#', 'Casual', '2D', 'UI'],
+    videoId: 'kc9bZ4GAihg', ytLink: 'https://www.youtube.com/watch?v=kc9bZ4GAihg' },
+  { tag: 'CASUAL 2D', title: 'Baby Sitter — 2D Casual Game', icon: '👶',
+    desc: '2D casual babysitting game with mini-game activities, time management, and colorful kid-friendly visuals.',
+    tech: ['Unity3D', 'C#', '2D', 'Casual', 'Mobile'],
+    videoId: 'wesFG39wmRM', ytLink: 'https://www.youtube.com/watch?v=wesFG39wmRM' },
+  { tag: 'CARTOON SHOOTER', title: 'Toon Verse — Cartoon Shooting Game', icon: '🎨',
+    desc: 'Cartoon-style shooting game with vibrant environments, weapon variety, and stylized VFX feedback.',
+    tech: ['Unity3D', 'C#', 'Shooting', 'Stylized', 'VFX'],
+    videoId: 'VN-U4v2C_FM', ytLink: 'https://www.youtube.com/watch?v=VN-U4v2C_FM' },
+  { tag: '2D RPG', title: 'Survivor .IO — Unity 2D RPG', icon: '🎯',
+    desc: '2D RPG with wave-based enemies, auto-attack systems, and progression mechanics inspired by Survivor.IO.',
+    tech: ['Unity3D', '2D', 'RPG', 'Mobile', 'Auto-Combat'],
+    videoId: '4nejgg-PMOg', ytLink: 'https://www.youtube.com/watch?v=4nejgg-PMOg' },
+  { tag: 'TOP-DOWN SHOOTER', title: 'State Of Survival — Top Down Shooter', icon: '💀',
+    desc: 'Top-down shooter with survival mechanics, wave-based enemies, and resource management.',
+    tech: ['Unity3D', 'C#', 'Top-Down', 'Shooter', 'Survival'],
+    videoId: 'GSKTQhfDIdE', ytLink: 'https://www.youtube.com/watch?v=GSKTQhfDIdE' },
+  { tag: 'ZOMBIE SURVIVAL', title: 'Run 2 Live — Zombie Survival', icon: '🧟',
+    desc: 'Zombie survival game with chase mechanics, resource scavenging, and tension-building atmosphere.',
+    tech: ['Unity3D', 'C#', 'AI', 'Survival', 'Horror'],
+    videoId: 'q4LNLbP6vRM', ytLink: 'https://www.youtube.com/watch?v=q4LNLbP6vRM' },
+  { tag: 'ROBOT SHOOTER', title: 'Robot Multiplayer Shooting Game', icon: '🤖',
+    desc: 'Multiplayer robot shooting game with networked combat, mech visuals, and competitive gameplay.',
+    tech: ['Unity3D', 'Photon', 'Multiplayer', 'Shooting'],
+    videoId: 'T9LvqG9p8rM', ytLink: 'https://www.youtube.com/watch?v=T9LvqG9p8rM' },
+  { tag: 'HYPER CASUAL', title: 'Push The Crowd', icon: '👥',
+    desc: 'Hyper-casual crowd mechanics with satisfying push physics, level progression, and one-tap controls.',
+    tech: ['Unity3D', 'C#', 'Hyper Casual', 'Physics', 'Mobile'],
+    videoId: 'GHlfY8S0ooM', ytLink: 'https://www.youtube.com/watch?v=GHlfY8S0ooM' },
+  { tag: 'POLYGON RPG', title: 'Poly Verse — Fantasy Polygon RPG', icon: '💠',
+    desc: 'Fantasy polygon RPG with low-poly art direction, exploration, combat encounters, and loot systems.',
+    tech: ['Unity3D', 'C#', 'RPG', 'Low-Poly', 'Combat'],
+    videoId: 'VqXU-ZM3Ln4', ytLink: 'https://www.youtube.com/watch?v=VqXU-ZM3Ln4' },
+  { tag: 'HYPER CASUAL', title: 'Mini Car Racer', icon: '🏁',
+    desc: 'Hyper-casual mini car racing with simple controls, colorful tracks, and progressive difficulty.',
+    tech: ['Unity3D', 'C#', 'Hyper Casual', 'Racing', 'Mobile'],
+    videoId: 'rJo-q2UBkdk', ytLink: 'https://www.youtube.com/watch?v=rJo-q2UBkdk' },
+  { tag: 'HYPER CASUAL', title: 'Ladder Race', icon: '🪜',
+    desc: 'Hyper-casual ladder building race with collection mechanics and competitive AI opponents.',
+    tech: ['Unity3D', 'C#', 'Hyper Casual', 'Mobile'],
+    videoId: 'NiMh-e4JL0I', ytLink: 'https://www.youtube.com/watch?v=NiMh-e4JL0I' },
+  { tag: 'TRENDING', title: 'Imposter Between Us', icon: '🔴',
+    desc: 'Unity trending game inspired by Among Us with impostor mechanics, task systems, and multiplayer gameplay.',
+    tech: ['Unity3D', 'C#', 'Multiplayer', 'Trending', 'Mobile'],
+    videoId: 'YyKmzasi1oU', ytLink: 'https://www.youtube.com/watch?v=YyKmzasi1oU' },
+  { tag: 'PUZZLE', title: 'Hero Rescue — Save the Princess', icon: '👸',
+    desc: 'Pin-pull puzzle game with rescue mechanics, progressive difficulty, and creative level design.',
+    tech: ['Unity3D', 'C#', 'Puzzle', '2D', 'Mobile'],
+    videoId: 'Yj33eJwXIPk', ytLink: 'https://www.youtube.com/watch?v=Yj33eJwXIPk' },
+  { tag: 'THIRD PERSON', title: 'Destructo Mania — Shooting Game', icon: '💥',
+    desc: 'Third-person shooting game with destructible environments, explosive VFX, and physics-based destruction.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Destruction', 'VFX'],
+    videoId: 'y1HmUoma3L0', ytLink: 'https://www.youtube.com/watch?v=y1HmUoma3L0' },
+  { tag: 'RACING', title: 'Extreme Car Racing Game', icon: '🏎️',
+    desc: 'Extreme car racing with high-speed tracks, drift mechanics, and competitive AI opponents.',
+    tech: ['Unity3D', 'C#', 'Racing', 'Physics', 'AI'],
+    videoId: 'kbVP2PZi2fo', ytLink: 'https://www.youtube.com/watch?v=kbVP2PZi2fo' },
+  { tag: 'DRAW PUZZLE', title: 'Draw The Lines — Save the Pet', icon: '✏️',
+    desc: 'Draw-to-solve puzzle game where players draw protective lines to save pets from hazards.',
+    tech: ['Unity3D', 'C#', 'Puzzle', '2D', 'Drawing'],
+    videoId: 'TvghnOBbasQ', ytLink: 'https://www.youtube.com/watch?v=TvghnOBbasQ' },
+  { tag: 'DRAW PUZZLE', title: 'Draw The Bridge — Save the Car', icon: '🌉',
+    desc: 'Physics-based bridge drawing puzzle where players draw bridges to get cars safely across gaps.',
+    tech: ['Unity3D', 'C#', 'Physics', 'Puzzle', 'Drawing'],
+    videoId: 'u76QRZQPtys', ytLink: 'https://www.youtube.com/watch?v=u76QRZQPtys' },
+  { tag: 'TRENDING', title: 'Crowd City', icon: '👥',
+    desc: 'Unity trending game with crowd collection mechanics, territory control, and competitive multiplayer.',
+    tech: ['Unity3D', 'C#', 'Trending', 'Mobile', 'AI'],
+    videoId: '6qbb-RF-yw0', ytLink: 'https://www.youtube.com/watch?v=6qbb-RF-yw0' },
+  { tag: 'BUS SIM', title: 'City Coach Bus Simulator', icon: '🚌',
+    desc: 'City bus simulator with route navigation, passenger management, and urban driving physics.',
+    tech: ['Unity3D', 'C#', 'Simulation', 'Physics', 'Vehicles'],
+    videoId: 'NUUmWSfJ6nY', ytLink: 'https://www.youtube.com/watch?v=NUUmWSfJ6nY' },
+  { tag: 'HYPER CASUAL', title: 'Body Race — Fat to Fit', icon: '🏃',
+    desc: 'Hyper-casual body transformation runner with obstacle avoidance and visual progression mechanics.',
+    tech: ['Unity3D', 'C#', 'Hyper Casual', 'Runner', 'Mobile'],
+    videoId: 'pqhimBTX7Yo', ytLink: 'https://www.youtube.com/watch?v=pqhimBTX7Yo' },
+  { tag: 'HYPER CASUAL', title: 'Bridge Race', icon: '🌉',
+    desc: 'Hyper-casual bridge building race with collection mechanics, color-coded platforms, and competitive gameplay.',
+    tech: ['Unity3D', 'C#', 'Hyper Casual', 'Racing', 'Mobile'],
+    videoId: 'g10B79tCYEw', ytLink: 'https://www.youtube.com/watch?v=g10B79tCYEw' },
+];
 
 const archiveGrid = document.getElementById('archiveGrid');
 
-function overviewMarkup(project) {
-  return `
-    <span class="preview-tag">${project.tag}</span>
-    <div class="project-placeholder">
-      <div class="placeholder-inner">
-        <div class="placeholder-kicker">${project.accent}</div>
-        <div class="placeholder-title">${project.title}</div>
-        <div class="placeholder-meta">Switch to Image or Video to preview media for this slot.</div>
-      </div>
-    </div>
-  `;
-}
+archiveGrid.innerHTML = projects.map((p, i) => {
+  const num = String(i + 1).padStart(2, '0');
+  const hasVideo = p.videoId;
+  const previewHTML = hasVideo
+    ? `<span class="preview-tag">${p.tag}</span>
+       <iframe src="https://www.youtube.com/embed/${p.videoId}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
+    : `<span class="preview-tag">${p.tag}</span>
+       <div class="project-placeholder"><div class="placeholder-inner">
+         <div class="placeholder-icon">${p.icon || '🎮'}</div>
+         <div class="placeholder-title">${p.title}</div>
+       </div></div>`;
+  const watchLink = p.ytLink || 'https://www.youtube.com/@Hucnain/videos';
 
-function imageMarkup(project) {
   return `
-    <span class="preview-tag">${project.tag} / IMAGE</span>
-    <img src="${project.image}" alt="${project.imageAlt}" loading="lazy">
-  `;
-}
-
-function videoMarkup(project) {
-  return `
-    <span class="preview-tag">${project.tag} / VIDEO</span>
-    <iframe
-      src="${project.videoEmbed}"
-      title="${project.title} demo"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      loading="lazy"></iframe>
-  `;
-}
-
-function previewMarkup(project, mode) {
-  if (mode === 'image') return imageMarkup(project);
-  if (mode === 'video') return videoMarkup(project);
-  return overviewMarkup(project);
-}
-
-function cardMarkup(project) {
-  return `
-    <article class="archive-card" id="${project.id}" data-project-id="${project.id}">
-      <div class="project-preview">${previewMarkup(project, 'overview')}</div>
+    <article class="archive-card" id="project-${num}">
+      <div class="project-preview">${previewHTML}</div>
       <div class="project-body">
-        <div class="project-head">
-          <div>
-            <div class="project-index">${project.number} / 50</div>
-            <h2>${project.title}</h2>
-          </div>
-        </div>
-        <p>${project.description}</p>
-        <div class="project-tech">
-          ${project.tech.map((item) => `<span>${item}</span>`).join('')}
-        </div>
-        <div class="media-switch">
-          <button type="button" class="active" data-media="overview">Overview</button>
-          <button type="button" data-media="image">Image</button>
-          <button type="button" data-media="video">Video</button>
-        </div>
+        <div class="project-head"><div>
+          <div class="project-index">${num} / ${projects.length}</div>
+          <h2>${p.title}</h2>
+        </div></div>
+        <p>${p.desc}</p>
+        <div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
         <div class="project-links">
-          <a href="${project.videoWatch}" target="_blank">Watch clip</a>
-          <a href="index.html#projects">Back to selected work</a>
+          <a href="${watchLink}" target="_blank">↗ Watch on YouTube</a>
+          <a href="index.html">← Back to Portfolio</a>
         </div>
       </div>
-    </article>
-  `;
-}
-
-archiveGrid.innerHTML = projectData.map(cardMarkup).join('');
-
-const projectMap = Object.fromEntries(projectData.map((project) => [project.id, project]));
-
-function setActiveMode(card, mode) {
-  const project = projectMap[card.dataset.projectId];
-  const preview = card.querySelector('.project-preview');
-  preview.innerHTML = previewMarkup(project, mode);
-  card.querySelectorAll('.media-switch button').forEach((button) => {
-    button.classList.toggle('active', button.dataset.media === mode);
-  });
-}
-
-document.querySelectorAll('.archive-card').forEach((card) => {
-  card.querySelectorAll('.media-switch button').forEach((button) => {
-    button.addEventListener('click', () => setActiveMode(card, button.dataset.media));
-  });
-});
+    </article>`;
+}).join('');
 </script>
-
 </body>
 </html>
