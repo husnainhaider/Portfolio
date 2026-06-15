@@ -6,6 +6,28 @@
 (() => {
   'use strict';
 
+  /* On page load: clean up URL ─ strip trailing /index.html + scroll to #hash then strip it */
+  function cleanPath(pathname) {
+    return pathname.endsWith('/index.html')
+      ? pathname.slice(0, -'index.html'.length)
+      : pathname;
+  }
+  const finalPath = cleanPath(window.location.pathname);
+  const hadHash   = window.location.hash && window.location.hash.length > 1;
+
+  if (hadHash) {
+    const id = window.location.hash.slice(1);
+    requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', finalPath + window.location.search);
+      }
+    });
+  } else if (finalPath !== window.location.pathname && window.history && window.history.replaceState) {
+    window.history.replaceState(null, '', finalPath + window.location.search);
+  }
+
   /* Smooth-scroll for in-page anchors WITHOUT putting #hash in the URL */
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href^="#"]');

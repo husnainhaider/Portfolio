@@ -9,29 +9,29 @@
 <meta name="author" content="Husnain Haider">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0A0908">
-<link rel="canonical" href="https://husnain.site/projects.html">
+<link rel="canonical" href="https://husnain.site/projects/">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://husnain.site/projects.html">
+<meta property="og:url" content="https://husnain.site/projects/">
 <meta property="og:title" content="Projects — Husnain Haider | Unity & XR Developer">
 <meta property="og:description" content="Browse 90+ Unity, AR, XR, and game projects by Husnain Haider.">
 <meta property="og:image" content="https://husnain.site/assets/photo.jpg">
 
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
 <nav class="nav" aria-label="Primary navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
+    <a href="/" class="nav-brand">
       <span class="nav-brand-mark">H</span>
       <span>
         <span class="nav-brand-name">Husnain Haider</span><br>
@@ -39,11 +39,11 @@
       </span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Stack</a></li>
-      <li><a href="index.html#experience">Work</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#skills">Stack</a></li>
+      <li><a href="/#experience">Work</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#contact">Contact</a></li>
       <li><a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="nav-cta">YouTube <span>↗</span></a></li>
     </ul>
     <button class="nav-burger" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
@@ -96,10 +96,10 @@
       <div class="footer-col">
         <h5>/ Navigate</h5>
         <ul>
-          <li><a href="index.html">← Back to home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#projects">Selected work</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="/">← Back to home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#projects">Selected work</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -121,14 +121,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Husnain Haider — built with care in Berlin</span>
-      <span>Hand-typed HTML / CSS · no frameworks</span>
+      <span>© 2026 Husnain Haider — Berlin</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/projects-data.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/projects-data.js" defer></script>
 <script defer>
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('archiveGrid');
@@ -170,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
           <div class="card-links">
             <a href="${watch}" target="_blank">↗ Watch</a>
-            <a href="index.html">← Home</a>
+            <a href="/">← Home</a>
           </div>
         </article>`;
     }).join('');

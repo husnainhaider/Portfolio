@@ -452,26 +452,30 @@ em { font-style: italic; color: var(--ink-dim); font-weight: 400; }
   max-width: 64ch;
 }
 
-/* === Projects (home) — brick grid ================ */
+/* === Projects (home) — 3-col equal grid ========== */
 .projects-wrap {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 36px 28px;
+  gap: 24px;
 }
-@media (min-width: 880px) {
-  .projects-wrap { grid-template-columns: repeat(12, 1fr); }
-  .project-card { grid-column: span 12; }
-  /* 7/5, 5/7, 6/6 — brick alternation */
-  .project-card:nth-child(6n+1) { grid-column: span 7; }
-  .project-card:nth-child(6n+2) { grid-column: span 5; }
-  .project-card:nth-child(6n+3) { grid-column: span 5; }
-  .project-card:nth-child(6n+4) { grid-column: span 7; }
-  .project-card:nth-child(6n+5) { grid-column: span 6; }
-  .project-card:nth-child(6n+6) { grid-column: span 6; }
-}
+@media (min-width: 720px)  { .projects-wrap { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+@media (min-width: 1100px) { .projects-wrap { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
+
 .project-card {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  padding: 20px;
+  transition: background 0.25s, transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.25s;
+  will-change: transform;
+}
+.project-card:hover {
+  background: var(--bg-2);
+  border-color: var(--rule-strong);
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 16px 40px rgba(27,25,22,0.10);
 }
 .project-card .project-thumb {
   position: relative;
@@ -545,7 +549,7 @@ em { font-style: italic; color: var(--ink-dim); font-weight: 400; }
 }
 
 .project-body {
-  padding-top: 18px;
+  padding-top: 16px;
   display: flex; flex-direction: column;
   flex: 1;
 }
@@ -565,7 +569,7 @@ em { font-style: italic; color: var(--ink-dim); font-weight: 400; }
 .project-body .tag-row .year { color: var(--ink-dim); margin-left: auto; }
 .project-body h3 {
   font-family: var(--display);
-  font-size: clamp(24px, 2.4vw, 34px);
+  font-size: clamp(22px, 1.8vw, 28px);
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.05;
@@ -884,7 +888,8 @@ footer {
   gap: 24px;
   padding-top: 24px;
 }
-@media (min-width: 720px) { .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+@media (min-width: 720px)  { .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+@media (min-width: 1100px) { .archive-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
 .archive-card {
   border: 1px solid var(--rule);
   padding: 22px;
