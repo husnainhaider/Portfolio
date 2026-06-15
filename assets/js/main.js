@@ -55,6 +55,23 @@
     });
   }
 
+  /* Inline-play YouTube thumbnails on click */
+  document.querySelectorAll('.project-thumb[data-video]').forEach(thumb => {
+    thumb.addEventListener('click', e => {
+      if (thumb.classList.contains('playing')) return;
+      const id = thumb.dataset.video;
+      if (!id) return;
+      e.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+      iframe.title = thumb.getAttribute('aria-label') || 'Project video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      thumb.appendChild(iframe);
+      thumb.classList.add('playing');
+    });
+  });
+
   /* Contact form: faux send */
   const form = document.querySelector('.contact-form form');
   if (form) {
