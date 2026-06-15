@@ -3,25 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Husnain Haider — Unity & XR Developer | Berlin, Germany</title>
+<title>Husnain Haider — Unity & XR Developer | Berlin</title>
 <meta name="description" content="Husnain Haider is a Unity & XR Developer with 6+ years building real-time games, AR experiences, and immersive worlds. Currently at Zaubar, Berlin. Previously at Bosch Digital. MSc AI at BTU Germany.">
 <meta name="keywords" content="Husnain Haider, Unity Developer, XR Developer, AR Developer, Game Programmer, Berlin, Germany, Zaubar, Bosch Digital, C#, Unity3D, Augmented Reality, VR Developer">
 <meta name="author" content="Husnain Haider">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A0908">
 <link rel="canonical" href="https://husnain.site/">
-<!-- Open Graph -->
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://husnain.site/">
 <meta property="og:title" content="Husnain Haider — Unity & XR Developer">
 <meta property="og:description" content="Unity & XR Developer with 6+ years building real-time games, AR experiences, and immersive worlds. Based in Berlin, Germany.">
 <meta property="og:image" content="https://husnain.site/assets/photo.jpg">
 <meta property="og:site_name" content="Husnain Haider Portfolio">
-<!-- Twitter Card -->
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Husnain Haider — Unity & XR Developer">
 <meta name="twitter:description" content="Unity & XR Developer with 6+ years building real-time games, AR experiences, and immersive worlds. Based in Berlin, Germany.">
 <meta name="twitter:image" content="https://husnain.site/assets/photo.jpg">
-<!-- JSON-LD Structured Data -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,1009 +47,793 @@
   "knowsAbout": ["Unity3D", "C#", "Augmented Reality", "XR Development", "Game Development", "AR Foundation", "OpenXR"]
 }
 </script>
+
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root {
-  --bg: #0C0C0F;
-  --bg-alt: #131318;
-  --bg-card: #18181E;
-  --text: #EAEAEC;
-  --text-muted: #8B8B95;
-  --accent: #6C63FF;
-  --accent-glow: rgba(108, 99, 255, 0.15);
-  --accent-secondary: #00D4AA;
-  --border: #2A2A35;
-  --border-hover: #3A3A48;
-  --serif: 'DM Serif Display', Georgia, serif;
-  --sans: 'DM Sans', system-ui, sans-serif;
-  --mono: 'JetBrains Mono', monospace;
-  --radius: 14px;
-  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-
-::selection { background: var(--accent); color: #fff; }
-a { color: inherit; text-decoration: none; }
-.container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
-
-/* ─── NAV ─── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(12, 12, 15, 0.8);
-  backdrop-filter: blur(24px) saturate(1.2);
-  border-bottom: 1px solid rgba(42,42,53,0.5);
-}
-nav .container {
-  display: flex; justify-content: space-between; align-items: center;
-  height: 68px;
-}
-.nav-logo {
-  position: relative; display: inline-flex; align-items: center; gap: 0.65rem;
-  font-family: var(--sans); font-size: 0.98rem; font-weight: 700;
-  letter-spacing: -0.04em; color: var(--text);
-  padding: 0.35rem 0 0.45rem; isolation: isolate;
-}
-.nav-logo::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 1px; border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-secondary), transparent);
-  background-size: 200% 100%;
-  animation: logoBeam 4.8s linear infinite;
-}
-.nav-logo-main {
-  background: linear-gradient(120deg, #ffffff 0%, #cfcdfd 35%, #8ef1df 70%, #ffffff 100%);
-  background-size: 200% 100%;
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: logoShift 5.5s ease-in-out infinite;
-}
-.nav-logo-tag {
-  position: relative; overflow: hidden;
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted);
-  padding: 0.2rem 0.55rem; border-radius: 999px;
-  border: 1px solid rgba(108,99,255,0.18);
-  background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(0,212,170,0.08));
-}
-.nav-logo-tag::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.28) 48%, transparent 100%);
-  transform: translateX(-140%);
-  animation: logoSweep 3.8s ease-in-out infinite;
-}
-.nav-logo-tag span { position: relative; z-index: 1; }
-.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-.nav-links a {
-  font-size: 0.82rem; font-weight: 500; color: var(--text-muted);
-  letter-spacing: 0.02em; transition: var(--transition);
-}
-.nav-links a:hover { color: var(--text); }
-.nav-resume {
-  background: var(--accent) !important; color: #fff !important;
-  padding: 0.45rem 1.1rem; border-radius: 6px; font-size: 0.78rem !important;
-  font-weight: 600 !important; transition: var(--transition);
-}
-.nav-resume:hover { opacity: 0.85; transform: translateY(-1px); }
-.hamburger {
-  display: none; flex-direction: column; gap: 5px; cursor: pointer;
-  background: none; border: none; padding: 4px;
-}
-.hamburger span {
-  width: 22px; height: 2px; background: var(--text); border-radius: 2px;
-  transition: var(--transition);
-}
-
-/* ─── PARTICLES CANVAS ─── */
-#particles-canvas { position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.45; }
-
-/* ─── HERO ENTRANCE ─── */
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-@keyframes gradientFlow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-@keyframes morphBlob { 0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}25%{border-radius:30% 60% 70% 40%/50% 60% 30% 60%}50%{border-radius:50% 60% 30% 60%/30% 50% 70% 50%}75%{border-radius:60% 30% 50% 40%/70% 40% 60% 30%} }
-@keyframes orbitSpin { from{transform:rotate(0deg)}to{transform:rotate(360deg)} }
-@keyframes counterSpin { from{transform:rotate(0deg)}to{transform:rotate(-360deg)} }
-@keyframes glowPulse { 0%,100%{box-shadow:0 0 20px var(--accent-glow),0 0 40px rgba(108,99,255,0.04)}50%{box-shadow:0 0 30px var(--accent-glow),0 0 60px rgba(108,99,255,0.1)} }
-
-.hero-badge { animation: fadeInUp 0.8s ease-out 0.2s both; }
-.hero h1 { animation: fadeInUp 0.8s ease-out 0.4s both; }
-.hero-sub { animation: fadeInUp 0.8s ease-out 0.6s both; }
-.hero-details { animation: fadeInUp 0.8s ease-out 0.8s both; }
-.hero-actions { animation: fadeInUp 0.8s ease-out 1s both; }
-.social-row { animation: fadeInUp 0.8s ease-out 1.15s both; }
-
-.hero h1 .accent {
-  background: linear-gradient(120deg, var(--accent), #9B8FFF, var(--accent));
-  background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: fadeInUp 0.8s ease-out 0.4s both, shimmer 4s linear 1.5s infinite;
-}
-.hero h1 .accent-green {
-  background: linear-gradient(120deg, var(--accent-secondary), #7DFFDC, var(--accent-secondary));
-  background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: fadeInUp 0.8s ease-out 0.4s both, shimmer 5s linear 1.5s infinite;
-}
-
-/* ─── FLOATING GEOMETRY ─── */
-.geo-shape { position: absolute; pointer-events: none; opacity: 0.04; border: 1px solid var(--accent); }
-.geo-1 { width: 80px; height: 80px; top: 30%; right: 8%; transform: rotate(45deg); animation: float 12s ease-in-out infinite, orbitSpin 30s linear infinite; }
-.geo-2 { width: 40px; height: 40px; top: 60%; right: 15%; border-radius: 50%; border-color: var(--accent-secondary); animation: float 15s ease-in-out infinite reverse; }
-.geo-3 { width: 60px; height: 60px; top: 45%; right: 4%; animation: morphBlob 10s ease-in-out infinite, float 18s ease-in-out infinite; border-color: var(--accent-secondary); }
-
-/* ─── PHOTO ORBIT RING ─── */
-.about-photo { position: relative; animation: glowPulse 4s ease-in-out infinite; transition: transform 0.3s ease; }
-.about-photo::before { content:''; position:absolute; inset:-8px; border-radius:50%; z-index:-1; background:conic-gradient(from 0deg,var(--accent),var(--accent-secondary),transparent,var(--accent)); animation:orbitSpin 8s linear infinite; opacity:0.25; }
-.about-photo::after { content:''; position:absolute; inset:-18px; border-radius:50%; z-index:-2; border:1px dashed rgba(108,99,255,0.12); animation:counterSpin 25s linear infinite; }
-
-/* ─── STAT HOVER ─── */
-.stat-number { display: inline-block; transition: transform 0.3s ease, text-shadow 0.3s ease; }
-.stat-number:hover { transform: scale(1.15); text-shadow: 0 0 20px var(--accent-glow); }
-
-/* ─── SKILL CARD SPOTLIGHT ─── */
-.skill-card::after { content:''; position:absolute; inset:0; border-radius:var(--radius); opacity:0; transition:opacity 0.4s; pointer-events:none; background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(108,99,255,0.07) 0%,transparent 60%); }
-.skill-card:hover::after { opacity: 1; }
-
-/* ─── TIMELINE CONNECTOR ─── */
-.exp-list { position: relative; }
-.exp-list::before { content:''; position:absolute; left:calc(1rem + 3px); top:2.4rem; bottom:2.4rem; width:2px; background:linear-gradient(to bottom,var(--accent),var(--accent-secondary),transparent); opacity:0.12; }
-.exp-item::before { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.exp-item:hover::before { transform: scale(1.6); box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent-glow); }
-
-/* ─── PROJECT CARD SHINE ─── */
-.project-card { position: relative; overflow: hidden; }
-.project-card::after { content:''; position:absolute; top:0; left:-100%; width:50%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent); transition:left 0.6s ease; z-index:1; pointer-events:none; }
-.project-card:hover::after { left: 150%; }
-
-/* ─── BUTTON EFFECTS ─── */
-.btn-primary, .btn-secondary { position: relative; overflow: hidden; }
-.btn-primary::before, .btn-secondary::before { content:''; position:absolute; top:50%; left:50%; width:0; height:0; border-radius:50%; background:rgba(255,255,255,0.12); transform:translate(-50%,-50%); transition:width 0.5s,height 0.5s; pointer-events:none; }
-.btn-primary:hover::before, .btn-secondary:hover::before { width: 300px; height: 300px; }
-
-/* ─── SECTION LABEL GRADIENT LINE ─── */
-.section-label { position: relative; display: inline-block; }
-.section-label::after { content:''; display:block; height:2px; margin-top:0.4rem; background:linear-gradient(90deg,var(--accent),var(--accent-secondary),transparent); background-size:200% 100%; animation:gradientFlow 3s ease infinite; border-radius:2px; }
-
-/* ─── NAV SCROLL ─── */
-nav.scrolled { background: rgba(12,12,15,0.95); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
-nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
-
-/* ─── HERO ─── */
-.hero {
-  min-height: 100vh; display: flex; align-items: center;
-  padding-top: 68px; position: relative; overflow: hidden;
-}
-.hero-bg-grid {
-  position: absolute; inset: 0; opacity: 0.03;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-.hero-glow {
-  position: absolute; top: -100px; right: -100px;
-  width: 500px; height: 500px; border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-  pointer-events: none; animation: float 8s ease-in-out infinite;
-}
-.hero-glow-2 {
-  position: absolute; bottom: -150px; left: -100px;
-  width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
-  pointer-events: none; animation: float 10s ease-in-out infinite reverse;
-}
-@keyframes float {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(20px, -20px); }
-}
-.hero-content { position: relative; z-index: 1; max-width: 720px; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.4rem 1rem; background: var(--accent-glow);
-  border: 1px solid rgba(108,99,255,0.2);
-  border-radius: 50px; font-size: 0.76rem; font-weight: 500;
-  color: var(--accent); margin-bottom: 2rem; letter-spacing: 0.03em;
-}
-.hero-badge .dot {
-  width: 7px; height: 7px; background: var(--accent-secondary); border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-  box-shadow: 0 0 8px var(--accent-secondary);
-}
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-@keyframes logoShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-@keyframes logoSweep {
-  0%, 18% { transform: translateX(-140%); }
-  42%, 100% { transform: translateX(140%); }
-}
-@keyframes logoBeam {
-  0% { background-position: 200% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.hero h1 {
-  font-family: var(--serif); font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-  line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; font-weight: 400;
-}
-.hero h1 .accent { color: var(--accent); }
-.hero h1 .accent-green { color: var(--accent-secondary); }
-.hero-sub {
-  font-size: 1.05rem; color: var(--text-muted); max-width: 540px;
-  margin-bottom: 2.5rem; line-height: 1.8; font-weight: 300;
-}
-.hero-details { display: flex; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
-.hero-detail {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.82rem; color: var(--text-muted);
-}
-.hero-detail svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; }
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.85rem 1.8rem; background: var(--accent);
-  color: #fff; border-radius: 8px; font-size: 0.88rem;
-  font-weight: 600; transition: var(--transition); border: none; cursor: pointer;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.85rem 1.8rem; background: transparent;
-  color: var(--text); border-radius: 8px; font-size: 0.88rem;
-  font-weight: 500; border: 1.5px solid var(--border); transition: var(--transition);
-}
-.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-/* Social buttons - full names */
-.social-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-.social-row a {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
-  padding: 0.5rem 1rem; min-width: auto;
-  border-radius: 8px; border: 1px solid var(--border); color: var(--text-muted);
-  transition: var(--transition); font-size: 0.78rem; font-weight: 500;
-  white-space: nowrap;
-}
-.social-row a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
-.social-row a svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
-
-/* ─── SECTION COMMONS ─── */
-section { padding: 6rem 0; }
-.section-label {
-  font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
-  color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 0.6rem;
-}
-.section-title {
-  font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  letter-spacing: -0.02em; margin-bottom: 0.75rem; font-weight: 400;
-}
-.section-desc {
-  color: var(--text-muted); max-width: 540px; font-size: 0.95rem;
-  margin-bottom: 3rem; font-weight: 300;
-}
-.alt-bg { background: var(--bg-alt); }
-
-/* ─── ABOUT ─── */
-.about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
-.about-photo {
-  aspect-ratio: 1; border-radius: 50%; overflow: hidden;
-  border: 2px solid var(--border); background: var(--bg-card);
-}
-.about-photo-placeholder {
-  width: 100%; height: 100%; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 0.5rem;
-  color: var(--text-muted); font-size: 0.8rem;
-}
-.about-photo-placeholder svg { opacity: 0.3; }
-.about-text h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 1.2rem; font-weight: 400; }
-.about-text p { color: var(--text-muted); margin-bottom: 1rem; font-weight: 300; font-size: 0.95rem; }
-.about-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-  margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border);
-}
-.stat-number { font-family: var(--serif); font-size: 2rem; color: var(--accent); line-height: 1; margin-bottom: 0.3rem; }
-.stat-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-
-/* ─── SKILLS ─── */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
-.skill-card {
-  background: var(--bg-card); border-radius: var(--radius); padding: 1.8rem;
-  border: 1px solid var(--border); transition: var(--transition);
-  position: relative; overflow: hidden;
-}
-.skill-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
-  opacity: 0; transition: var(--transition);
-}
-.skill-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-.skill-card:hover::before { opacity: 1; }
-.skill-icon { font-size: 1.5rem; margin-bottom: 1rem; }
-.skill-card h4 { font-weight: 600; margin-bottom: 1rem; font-size: 0.92rem; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.skill-tag {
-  padding: 0.3rem 0.65rem; background: rgba(108,99,255,0.08); border-radius: 5px;
-  font-size: 0.72rem; font-family: var(--mono); font-weight: 500;
-  color: var(--text-muted); transition: var(--transition); border: 1px solid transparent;
-}
-.skill-tag:hover { color: var(--accent); border-color: rgba(108,99,255,0.2); }
-
-/* ─── EXPERIENCE ─── */
-.exp-list { max-width: 740px; }
-.exp-item {
-  padding: 2rem; background: var(--bg-card); border-radius: var(--radius);
-  border: 1px solid var(--border); margin-bottom: 1.25rem;
-  transition: var(--transition); position: relative; padding-left: 2.5rem;
-}
-.exp-item:hover { border-color: var(--border-hover); }
-.exp-item::before {
-  content: ''; position: absolute; left: 1rem; top: 2.4rem;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent); box-shadow: 0 0 10px var(--accent-glow);
-}
-.exp-date { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.03em; }
-.exp-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.1rem; }
-.exp-company { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; }
-.exp-item p { font-size: 0.82rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; }
-
-/* ─── PROJECTS ─── */
-.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-.project-card {
-  background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);
-  overflow: hidden; transition: var(--transition); display: flex; flex-direction: column;
-}
-.project-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-.project-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
-.project-thumb {
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
-  aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.project-thumb-icon { font-size: 3rem; opacity: 0.15; }
-.project-thumb-tag {
-  position: absolute; top: 1rem; left: 1rem;
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--accent); background: var(--accent-glow);
-  padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(108,99,255,0.15);
-  z-index: 2;
-}
-.project-thumb iframe {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-}
-.project-thumb.has-video { aspect-ratio: 16/9; }
-.project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-.project-body h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
-.project-body p {
-  font-size: 0.82rem; color: var(--text-muted); font-weight: 300;
-  line-height: 1.7; margin-bottom: 1rem; flex: 1;
-}
-.project-tech { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1rem; }
-.project-tech span {
-  font-family: var(--mono); font-size: 0.65rem; padding: 0.2rem 0.5rem;
-  background: rgba(255,255,255,0.04); border-radius: 4px; color: var(--text-muted);
-  border: 1px solid var(--border);
-}
-.project-links { display: flex; gap: 1rem; flex-wrap: wrap; }
-.project-links a {
-  font-size: 0.78rem; font-weight: 500; color: var(--accent);
-  transition: var(--transition); display: flex; align-items: center; gap: 0.3rem;
-}
-.project-links a:hover { color: var(--accent-secondary); }
-.projects-actions {
-  display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;
-}
-
-/* ─── EDUCATION ─── */
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 740px; }
-.edu-card {
-  padding: 2rem; background: var(--bg-card); border-radius: var(--radius);
-  border: 1px solid var(--border); transition: var(--transition);
-}
-.edu-card:hover { border-color: var(--border-hover); }
-.edu-date { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 0.5rem; }
-.edu-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
-.edu-card p { font-size: 0.82rem; color: var(--text-muted); }
-
-/* ─── CONTACT ─── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
-.contact-info h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 400; }
-.contact-info > p { color: var(--text-muted); margin-bottom: 2rem; font-weight: 300; font-size: 0.95rem; }
-.contact-detail {
-  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.88rem;
-}
-.contact-detail a { color: var(--text); transition: var(--transition); }
-.contact-detail a:hover { color: var(--accent); }
-.contact-icon {
-  width: 38px; height: 38px; border-radius: 10px; background: var(--accent-glow);
-  border: 1px solid rgba(108,99,255,0.15);
-  display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0;
-}
-.contact-form { display: flex; flex-direction: column; gap: 1rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.contact-form input, .contact-form textarea {
-  width: 100%; padding: 0.85rem 1rem; background: var(--bg-card);
-  border: 1.5px solid var(--border); border-radius: 10px; font-family: var(--sans);
-  font-size: 0.88rem; color: var(--text); transition: var(--transition); outline: none;
-}
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-muted); }
-.contact-form input:focus, .contact-form textarea:focus {
-  border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow);
-}
-.contact-form textarea { resize: vertical; min-height: 130px; }
-.contact-form button {
-  padding: 0.9rem 2rem; background: var(--accent); color: #fff;
-  border: none; border-radius: 10px; font-size: 0.88rem; font-weight: 600;
-  cursor: pointer; transition: var(--transition); font-family: var(--sans); width: fit-content;
-}
-.contact-form button:hover { box-shadow: 0 8px 24px var(--accent-glow); transform: translateY(-1px); }
-
-/* ─── FOOTER ─── */
-footer { padding: 3rem 0; border-top: 1px solid var(--border); text-align: center; }
-.footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-.footer-links a { font-size: 0.78rem; color: var(--text-muted); transition: var(--transition); }
-.footer-links a:hover { color: var(--accent); }
-footer > .container > p { font-size: 0.72rem; color: var(--text-muted); }
-
-/* ─── SCROLL REVEAL ─── */
-.reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ─── MOBILE ─── */
-@media (max-width: 768px) {
-  .nav-logo { font-size: 0.84rem; gap: 0.45rem; }
-  .nav-logo-tag { font-size: 0.55rem; letter-spacing: 0.12em; padding: 0.18rem 0.42rem; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .nav-links.open {
-    display: flex; flex-direction: column; position: absolute;
-    top: 68px; left: 0; right: 0; background: rgba(12,12,15,0.97);
-    backdrop-filter: blur(20px); padding: 1.5rem 2rem; gap: 1.2rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .about-photo { max-width: 220px; }
-  .about-stats { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card.featured { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .form-row { grid-template-columns: 1fr; }
-  .edu-grid { grid-template-columns: 1fr; }
-  .hero-details { gap: 1rem; }
-  section { padding: 4rem 0; }
-}
-</style>
+<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-<canvas id="particles-canvas"></canvas>
+<!-- Custom cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 
-<!-- NAV -->
-<nav>
-  <div class="container">
-    <a href="#" class="nav-logo" aria-label="Husnain's Portfolio">
-      <span class="nav-logo-main">Husnain's Portfolio</span>
-      <span class="nav-logo-tag"><span>XR / Unity</span></span>
+<!-- Grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- HUD top bar -->
+<header class="hud" aria-label="System status">
+  <div class="hud-inner">
+    <div class="hud-cell">
+      <span class="hud-dot"></span>
+      <span class="hud-val">SYS:&nbsp;ONLINE</span>
+      <span class="hud-key">/ HSND.4.7</span>
+    </div>
+    <div class="hud-cell hud-ticker">
+      <div class="hud-ticker-track">
+        <span>Available for senior Unity / XR roles — Berlin or remote</span>
+        <span>Building WebAR at Zaubar</span>
+        <span>MSc AI · Brandenburg University of Technology</span>
+        <span>6+ years shipping real-time systems</span>
+        <span>Photon · ARKit · OpenXR · URP · ECS</span>
+        <span>Available for senior Unity / XR roles — Berlin or remote</span>
+        <span>Building WebAR at Zaubar</span>
+        <span>MSc AI · Brandenburg University of Technology</span>
+        <span>6+ years shipping real-time systems</span>
+        <span>Photon · ARKit · OpenXR · URP · ECS</span>
+      </div>
+    </div>
+    <div class="hud-cell">
+      <span class="hud-key">SEC:</span>
+      <span class="hud-val" data-section>HERO</span>
+    </div>
+    <div class="hud-cell">
+      <span class="hud-key">UP:</span>
+      <span class="hud-val" data-uptime>00:00</span>
+    </div>
+    <div class="hud-cell">
+      <span class="hud-val" data-clock>00:00:00 UTC</span>
+    </div>
+    <span class="hud-progress" data-progress></span>
+  </div>
+</header>
+
+<!-- Secondary nav -->
+<nav class="nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Husnain Haider — Home">
+      <span class="nav-brand-mark">H</span>
+      <span>
+        <span class="nav-brand-name">Husnain Haider</span><br>
+        <span class="nav-brand-sub">unity · xr · real-time systems</span>
+      </span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#experience">Work</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="assets/Resume_Husnain_Haider.pdf" target="_blank" class="nav-resume">Resume</a></li>
+      <li><a href="assets/Resume_Husnain_Haider.pdf" target="_blank" class="nav-cta">Resume <span>↗</span></a></li>
     </ul>
-    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <button class="nav-burger" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="geo-shape geo-1"></div>
-  <div class="geo-shape geo-2"></div>
-  <div class="geo-shape geo-3"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge"><span class="dot"></span> Open to opportunities</div>
-      <h1>
-        Hi, I'm <span class="accent">Husnain</span>.<br>
-        I build <span class="accent-green">immersive</span> worlds.
-      </h1>
-      <p class="hero-sub">Unity & XR Developer with 6+ years crafting real-time systems, AR experiences, and large-scale interactive worlds — from multiplayer FPS to industrial AR at Bosch.</p>
-      <div class="hero-details">
-        <span class="hero-detail">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Berlin, Germany
-        </span>
-        <span class="hero-detail">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          Zaubar · XR Developer
-        </span>
-        <span class="hero-detail">
-          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 12 0 12 0v-5"/></svg>
-          MSc AI · BTU Germany
-        </span>
+<!-- Side rails (decorative) -->
+<aside class="rail rail-l" aria-hidden="true">
+  <span class="rail-text">Hsnd / Portfolio · 2026 · v4.7</span>
+</aside>
+<aside class="rail rail-r" aria-hidden="true">
+  <span class="rail-text">Berlin · 52.52° N · 13.40° E</span>
+</aside>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-section hero" id="hero" style="padding-bottom: 56px;">
+    <div class="inner hero-inner">
+
+      <div class="hero-left">
+        <div class="hero-meta-top">
+          <span class="hero-status"><span class="dot"></span>Available · Open to opportunities</span>
+          <span class="hero-meta-spacer"></span>
+          <span class="hero-coord">52.5200°N&nbsp;&nbsp;13.4050°E</span>
+        </div>
+
+        <h1>
+          <span class="line">Real-time</span>
+          <span class="line"><span class="ink-it">systems &amp;</span></span>
+          <span class="line"><span class="underline-wrap">immersive</span></span>
+          <span class="line accent">worlds.</span>
+        </h1>
+
+        <p class="hero-cap">
+          I'm <strong>Husnain Haider</strong> — a Unity &amp; XR developer
+          <span class="italic">shipping games, AR experiences,</span>
+          and <span class="italic">real-time tools</span> from Berlin.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-hover>Selected work <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-ghost" data-hover>Start a conversation</a>
+        </div>
       </div>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View My Work →</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
-      </div>
-      <div class="social-row">
-        <a href="https://linkedin.com/in/husnain-haider0" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/husnainhaider" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          YouTube
-        </a>
-        <a href="mailto:hucnen@gmail.com">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Email
-        </a>
-      </div>
+
+      <aside class="hero-panel reveal">
+        <span class="hero-panel-title">ID.0001 — operator</span>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo">
+            <img src="assets/photo.jpg" alt="Husnain Haider portrait" loading="eager">
+            <span class="hero-photo-frame-marks"></span>
+          </div>
+        </div>
+        <dl class="hero-meta-list">
+          <dt>Name</dt>     <dd>Husnain Haider</dd>
+          <dt>Class</dt>    <dd>Unity / XR Developer</dd>
+          <dt>Studio</dt>   <dd><span class="accent">Zaubar</span> · Berlin</dd>
+          <dt>Years</dt>    <dd>06+</dd>
+          <dt>Stack</dt>    <dd>C# · Unity · ARKit · Photon</dd>
+          <dt>Now</dt>      <dd>MSc AI @ BTU</dd>
+        </dl>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Tech-stack marquee -->
+  <div class="stack-marquee" aria-hidden="true">
+    <div class="stack-marquee-track">
+      <span>Unity3D</span><span class="dot-sep">◆</span>
+      <span>C#</span><span class="dot-sep">◆</span>
+      <span>AR Foundation</span><span class="dot-sep">◆</span>
+      <span>OpenXR</span><span class="dot-sep">◆</span>
+      <span>Shader Graph</span><span class="dot-sep">◆</span>
+      <span>Photon</span><span class="dot-sep">◆</span>
+      <span>URP</span><span class="dot-sep">◆</span>
+      <span>ECS</span><span class="dot-sep">◆</span>
+      <span>WebGL</span><span class="dot-sep">◆</span>
+      <span>Vision Pro</span><span class="dot-sep">◆</span>
+      <span>Blender</span><span class="dot-sep">◆</span>
+      <span>TypeScript</span><span class="dot-sep">◆</span>
+      <span>Unity3D</span><span class="dot-sep">◆</span>
+      <span>C#</span><span class="dot-sep">◆</span>
+      <span>AR Foundation</span><span class="dot-sep">◆</span>
+      <span>OpenXR</span><span class="dot-sep">◆</span>
+      <span>Shader Graph</span><span class="dot-sep">◆</span>
+      <span>Photon</span><span class="dot-sep">◆</span>
+      <span>URP</span><span class="dot-sep">◆</span>
+      <span>ECS</span><span class="dot-sep">◆</span>
+      <span>WebGL</span><span class="dot-sep">◆</span>
+      <span>Vision Pro</span><span class="dot-sep">◆</span>
+      <span>Blender</span><span class="dot-sep">◆</span>
+      <span>TypeScript</span><span class="dot-sep">◆</span>
     </div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <span class="section-label reveal">01 — About</span>
-    <h2 class="section-title reveal">Who I am</h2>
-    <div class="about-grid">
-      <div class="about-photo reveal">
-        <img src="assets/photo.jpg" alt="Husnain Haider" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="about-text reveal">
-        <h3>Building real-time systems &amp; immersive experiences</h3>
-        <p>I'm a Unity & XR Developer with 6+ years of experience building everything from multiplayer FPS games to industrial AR training apps. I specialize in scalable Unity architecture, performance optimization, and shipping polished products across mobile, AR, and WebGL platforms.</p>
-        <p>Currently at Zaubar in Berlin, I build WebAR storytelling experiences and prototype AI-driven spatial agents. I'm also pursuing my Master's in AI at Brandenburg University of Technology, exploring the intersection of game systems and machine intelligence.</p>
-        <p>I speak English fluently and I'm actively learning German (A2).</p>
-        <div class="about-stats">
-          <div><div class="stat-number">6+</div><div class="stat-label">Years Experience</div></div>
-          <div><div class="stat-number">90+</div><div class="stat-label">Shipped Projects</div></div>
-          <div><div class="stat-number">MSc</div><div class="stat-label">AI (in progress)</div></div>
+  <!-- ABOUT -->
+  <section class="page-section" id="about">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">01</span><span class="tick"></span>About</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Building <em>real-time</em><br>systems &amp; <em>immersive</em><br>experiences.
+          </h2>
         </div>
+        <p class="lede-sm">
+          Six years of Unity, C#, and a healthy obsession with frame budgets,
+          modular architecture, and the quiet satisfaction of shipping things
+          that actually run on a phone.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="alt-bg">
-  <div class="container">
-    <span class="section-label reveal">02 — Skills</span>
-    <h2 class="section-title reveal">Tech stack &amp; expertise</h2>
-    <p class="section-desc reveal">The tools and technologies I use to bring ideas to life.</p>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎮</div>
-        <h4>Unity / C#</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Unity3D</span><span class="skill-tag">C#</span>
-          <span class="skill-tag">ECS</span><span class="skill-tag">Addressables</span>
-          <span class="skill-tag">Editor Tooling</span><span class="skill-tag">Profiling</span>
-          <span class="skill-tag">Async Programming</span>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p>
+            I'm a <strong>Unity &amp; XR Developer</strong> with six-plus years building
+            everything from <span class="italic-i">multiplayer FPS</span> to
+            <span class="italic-i">industrial AR training apps</span>. My happy place is
+            scalable Unity architecture, performance work, and shipping polished
+            products across mobile, AR, and WebGL.
+          </p>
+          <p>
+            Currently at <span class="accent">Zaubar</span> in Berlin, I'm building
+            WebAR storytelling experiences and prototyping AI-driven spatial agents.
+            I'm also pursuing my <span class="accent">MSc in AI</span> at Brandenburg
+            University of Technology — exploring where game systems meet machine
+            intelligence.
+          </p>
+          <p>
+            English fluently, German actively (A2). Most comfortable when there's a
+            profiler open and a build to ship.
+          </p>
         </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🥽</div>
-        <h4>AR / XR</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">AR Foundation</span><span class="skill-tag">OpenXR</span>
-          <span class="skill-tag">XR Toolkit</span><span class="skill-tag">ARKit</span>
-          <span class="skill-tag">ARCore</span><span class="skill-tag">Vision Pro</span>
-          <span class="skill-tag">WebAR</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎨</div>
-        <h4>Rendering &amp; Art</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Shader Graph</span><span class="skill-tag">URP</span>
-          <span class="skill-tag">VFX</span><span class="skill-tag">Blender</span>
-          <span class="skill-tag">Photoshop</span><span class="skill-tag">Figma</span>
-          <span class="skill-tag">Substance Painter</span><span class="skill-tag">Spine</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🌐</div>
-        <h4>Platforms &amp; Web</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Android</span><span class="skill-tag">iOS</span>
-          <span class="skill-tag">WebGL</span><span class="skill-tag">Vue.js</span>
-          <span class="skill-tag">TypeScript</span><span class="skill-tag">Native Plugins</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔧</div>
-        <h4>Languages &amp; Backend</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">C#</span><span class="skill-tag">C++</span>
-          <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Firebase</span><span class="skill-tag">REST APIs</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚙️</div>
-        <h4>Workflow &amp; Practices</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Git</span><span class="skill-tag">GitHub</span>
-          <span class="skill-tag">GitLab</span><span class="skill-tag">Jira</span>
-          <span class="skill-tag">Agile</span><span class="skill-tag">Code Reviews</span>
-          <span class="skill-tag">CI/CD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- EXPERIENCE (moved before projects) -->
-<section id="experience">
-  <div class="container">
-    <span class="section-label reveal">03 — Experience</span>
-    <h2 class="section-title reveal">Professional journey</h2>
-    <p class="section-desc reveal">Where I've worked and what I've built.</p>
-    <div class="exp-list">
-      <div class="exp-item reveal">
-        <div class="exp-date">JUL 2025 — PRESENT</div>
-        <h4>Unity & XR Developer</h4>
-        <div class="exp-company">Zaubar · Berlin, Germany</div>
-        <p>Building WebAR storytelling with Unity AR Foundation, Vue, and Directus CMS. Designing modular XR interactions and prototyping AI spatial agents with RAG and computer vision. Shipped native Unity plugins for Android, iOS, and Web with HLS playback.</p>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-date">FEB 2025 — JUL 2025</div>
-        <h4>Unity & AR Developer</h4>
-        <div class="exp-company">Bosch Digital · Berlin, Germany</div>
-        <p>Built AR industrial applications using URP shaders, robust lighting, and ARKit/ARCore fallbacks. Created Unity editor tools for asset alignment and anchor debugging. Profiled CPU/GPU and memory to cut frame costs. Streamlined Blender→Unity pipeline with Addressables.</p>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-date">JUL 2021 — MAR 2024</div>
-        <h4>Senior Unity Developer</h4>
-        <div class="exp-company">Studio Mega Fury · Pakistan</div>
-        <p>Delivered stylized shaders, combat VFX, and scalable render paths hitting frame budgets across diverse mobile devices. Built artist-friendly editor tools and standardized UI/gameplay animation. Mentored engineers through code reviews and shared libraries.</p>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-date">OCT 2020 — MAY 2021</div>
-        <h4>Game Programmer</h4>
-        <div class="exp-company">Trio Ford Solutions · Australia (Remote)</div>
-        <p>Built modular gameplay and event-driven C# systems with unit tests. Cut load times via profiling and async scene streaming. Added analytics and A/B testing to guide balance and retention decisions across multiple mobile titles.</p>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-date">2017 — 2020</div>
-        <h4>Freelance Unity Developer</h4>
-        <div class="exp-company">Various Clients · Remote</div>
-        <p>Crafted shaders, post-processing, and rendering pipelines for low-end hardware. Automated import/setup pipelines and authored VFX and animation graphs across multiple game projects.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS (moved after experience) -->
-<section id="projects" class="alt-bg">
-  <div class="container">
-    <span class="section-label reveal">04 — Projects</span>
-    <h2 class="section-title reveal">Selected work</h2>
-    <p class="section-desc reveal">Games, AR experiences, and real-time systems I've built.</p>
-    <div class="projects-grid">
-
-      <div class="project-card featured reveal">
-        <div class="project-thumb has-video">
-          <span class="project-thumb-tag">MULTIPLAYER FPS</span>
-          <iframe src="https://www.youtube.com/embed/3QN_avy_Hl0" title="Line of Control Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="project-body">
-          <h3>Line of Control (LOC)</h3>
-          <p>Multiplayer FPS with Photon networking, physically based lighting, modular weapon VFX, recoil systems, and auto-LOD tools. Optimized for stable frame pacing on mid-range hardware with decals, fog volumes, and URP materials.</p>
-          <div class="project-tech"><span>Unity3D</span><span>C#</span><span>Photon</span><span>URP</span><span>Networking</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/watch?v=3QN_avy_Hl0" target="_blank">↗ Watch on YouTube</a>
-            <a href="projects.html#project-01">More Projects →</a>
+        <div class="stats-grid reveal reveal-delay-1">
+          <div class="stat">
+            <div class="stat-num">06<span class="plus">+</span></div>
+            <div class="stat-label">Years shipping</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">90<span class="plus">+</span></div>
+            <div class="stat-label">Projects delivered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">MSc</div>
+            <div class="stat-label">AI · in progress</div>
           </div>
         </div>
       </div>
-
-      <div class="project-card reveal">
-        <div class="project-thumb has-video">
-          <span class="project-thumb-tag">MMORPG</span>
-          <iframe src="https://www.youtube.com/embed/PA4sbqfedqU" title="Akrasin MMORPG Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="project-body">
-          <h3>Akrasin MMORPG</h3>
-          <p>Massively multiplayer RPG with quest/dialogue tools, spell FX, shader-driven fog, animated UI widgets, and designer-friendly Timeline content workflows.</p>
-          <div class="project-tech"><span>Unity3D</span><span>C#</span><span>Multiplayer</span><span>Timeline</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/watch?v=PA4sbqfedqU" target="_blank">↗ Watch on YouTube</a>
-            <a href="projects.html#project-02">More Projects →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-thumb has-video">
-          <span class="project-thumb-tag">3D ADVENTURE</span>
-          <iframe src="https://www.youtube.com/embed/QQuzqS29sr8" title="The Sands of Abzu Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="project-body">
-          <h3>The Sands of Abzu</h3>
-          <p>Cel-shaded adventure with stylized water, cinematic camera logic, interactable shaders, and puzzle systems built with Timeline curves.</p>
-          <div class="project-tech"><span>Unity3D</span><span>Cel Shading</span><span>Timeline</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/watch?v=QQuzqS29sr8" target="_blank">↗ Watch on YouTube</a>
-            <a href="projects.html#project-03">More Projects →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <span class="project-thumb-icon">🗺️</span>
-          <span class="project-thumb-tag">AR EXPERIENCE</span>
-        </div>
-        <div class="project-body">
-          <h3>AR Treasure Hunt</h3>
-          <p>Large-area AR exploration with GPS anchoring, surface detection, responsive outdoor UX, and event-bus architecture for modular features.</p>
-          <div class="project-tech"><span>Unity3D</span><span>ARKit</span><span>ARCore</span><span>Addressables</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">↗ Watch Demo</a>
-            <a href="projects.html#project-04">More Projects →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <span class="project-thumb-icon">🥷</span>
-          <span class="project-thumb-tag">RPG ACTION</span>
-        </div>
-        <div class="project-body">
-          <h3>Ninja Tashani</h3>
-          <p>3D RPG action game with sword trails, combo FX, layered animation controllers, blend trees, and a scalable HUD with scriptable events.</p>
-          <div class="project-tech"><span>Unity3D</span><span>C#</span><span>Animator</span><span>VFX</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">↗ Watch Demo</a>
-            <a href="projects.html#project-05">More Projects →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-thumb has-video">
-          <span class="project-thumb-tag">SURVIVAL</span>
-          <iframe src="https://www.youtube.com/embed/3GjJghptq3o" title="Dead Island Survival Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="project-body">
-          <h3>Dead Island Survival</h3>
-          <p>Multiplayer survival with procedural weather, ECS architecture, runtime lighting tools, biome blending, and designer-ready FX presets.</p>
-          <div class="project-tech"><span>Unity3D</span><span>Photon</span><span>ECS</span><span>Procedural</span></div>
-          <div class="project-links">
-            <a href="https://www.youtube.com/watch?v=3GjJghptq3o" target="_blank">↗ Watch on YouTube</a>
-            <a href="projects.html#project-06">More Projects →</a>
-          </div>
-        </div>
-      </div>
-
     </div>
-    <div class="projects-actions reveal">
-      <a href="projects.html" class="btn-primary">More Projects →</a>
-      <a href="https://www.youtube.com/@Hucnain/videos" class="btn-secondary" target="_blank">🎬 Explore all projects on YouTube →</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <span class="section-label reveal">05 — Education</span>
-    <h2 class="section-title reveal">Academic background</h2>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <div class="edu-date">2024 — PRESENT</div>
-        <h4>MSc Artificial Intelligence</h4>
-        <p>Brandenburg University of Technology (BTU), Cottbus, Germany</p>
+  <!-- SKILLS -->
+  <section class="page-section" id="skills">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">02</span><span class="tick"></span>Stack</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Tools &amp; <em>tooling</em>.
+          </h2>
+        </div>
+        <p class="lede-sm">
+          What I reach for daily — runtime, art pipeline, platform, infra.
+          Comfortable across the seam where engineering meets art.
+        </p>
       </div>
-      <div class="edu-card reveal">
-        <div class="edu-date">2017 — 2021</div>
-        <h4>BS Computer Science</h4>
-        <p>University of Engineering & Technology, Lahore, Pakistan</p>
+
+      <div class="skills-grid">
+        <div class="skill reveal">
+          <div class="skill-cat">/ Runtime</div>
+          <h4>Unity <span class="it">& C#</span></h4>
+          <div class="skill-tags">
+            <span>Unity3D</span><span>C#</span><span>ECS</span>
+            <span>Addressables</span><span>Editor Tools</span>
+            <span>Profiling</span><span>Async</span>
+          </div>
+        </div>
+
+        <div class="skill reveal reveal-delay-1">
+          <div class="skill-cat">/ Immersive</div>
+          <h4>AR <span class="it">/ XR</span></h4>
+          <div class="skill-tags">
+            <span>AR Foundation</span><span>OpenXR</span><span>XR Toolkit</span>
+            <span>ARKit</span><span>ARCore</span><span>Vision Pro</span><span>WebAR</span>
+          </div>
+        </div>
+
+        <div class="skill reveal reveal-delay-2">
+          <div class="skill-cat">/ Visuals</div>
+          <h4>Rendering <span class="it">& art</span></h4>
+          <div class="skill-tags">
+            <span>Shader Graph</span><span>URP</span><span>VFX Graph</span>
+            <span>Blender</span><span>Substance</span><span>Figma</span><span>Spine</span>
+          </div>
+        </div>
+
+        <div class="skill reveal">
+          <div class="skill-cat">/ Platform</div>
+          <h4>Platforms <span class="it">& web</span></h4>
+          <div class="skill-tags">
+            <span>Android</span><span>iOS</span><span>WebGL</span>
+            <span>Vue.js</span><span>TypeScript</span><span>Native Plugins</span>
+          </div>
+        </div>
+
+        <div class="skill reveal reveal-delay-1">
+          <div class="skill-cat">/ Engineering</div>
+          <h4>Languages <span class="it">& backend</span></h4>
+          <div class="skill-tags">
+            <span>C#</span><span>C++</span><span>Python</span>
+            <span>JavaScript</span><span>Firebase</span><span>REST</span>
+          </div>
+        </div>
+
+        <div class="skill reveal reveal-delay-2">
+          <div class="skill-cat">/ Workflow</div>
+          <h4>Practice <span class="it">& process</span></h4>
+          <div class="skill-tags">
+            <span>Git / GitHub</span><span>GitLab</span><span>Jira</span>
+            <span>Agile</span><span>Code Reviews</span><span>CI / CD</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="alt-bg">
-  <div class="container">
-    <span class="section-label reveal">06 — Contact</span>
-    <h2 class="section-title reveal">Let's connect</h2>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <h3>Open to new opportunities</h3>
-        <p>I'm actively looking for full-time software engineering roles in Unity, XR, and real-time systems. If your team is building immersive products and needs a developer with 6+ years of hands-on experience — I'd love to hear from you.</p>
-        <div class="contact-detail">
-          <div class="contact-icon">✉</div>
-          <a href="mailto:hucnen@gmail.com">hucnen@gmail.com</a>
+  <!-- EXPERIENCE -->
+  <section class="page-section" id="experience">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">03</span><span class="tick"></span>Work</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Where I've <em>built things</em>.
+          </h2>
         </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📍</div>
-          <span>Berlin, Germany</span>
+        <p class="lede-sm">
+          From Pakistan to Berlin via remote-only contracts. A loose history of the studios
+          and the things I shipped while I was there.
+        </p>
+      </div>
+
+      <div class="exp-list">
+
+        <article class="exp-item reveal">
+          <div class="exp-date">
+            <span class="badge">▶ current</span>
+            <span>JUL 2025 — Now</span>
+          </div>
+          <div class="exp-body">
+            <h4>Unity &amp; XR Developer <span class="role-it">@ Zaubar</span></h4>
+            <div class="exp-company">Zaubar <span class="city">/ Berlin · DE</span></div>
+            <p>
+              Building WebAR storytelling with Unity AR Foundation, Vue, and Directus
+              CMS. Designing modular XR interactions and prototyping AI spatial agents
+              with RAG and computer vision. Shipped native Unity plugins for Android,
+              iOS, and Web with HLS playback.
+            </p>
+          </div>
+        </article>
+
+        <article class="exp-item reveal">
+          <div class="exp-date">
+            <span class="badge muted">archived</span>
+            <span>FEB 2025 — JUL 2025</span>
+          </div>
+          <div class="exp-body">
+            <h4>Unity &amp; AR Developer <span class="role-it">@ Bosch Digital</span></h4>
+            <div class="exp-company">Bosch Digital <span class="city">/ Berlin · DE</span></div>
+            <p>
+              Built AR industrial applications using URP shaders, robust lighting,
+              and ARKit/ARCore fallbacks. Wrote Unity editor tools for asset alignment
+              and anchor debugging. Profiled CPU/GPU and memory to cut frame costs.
+              Streamlined Blender → Unity pipeline with Addressables.
+            </p>
+          </div>
+        </article>
+
+        <article class="exp-item reveal">
+          <div class="exp-date">
+            <span class="badge muted">archived</span>
+            <span>JUL 2021 — MAR 2024</span>
+          </div>
+          <div class="exp-body">
+            <h4>Senior Unity Developer <span class="role-it">@ Studio Mega Fury</span></h4>
+            <div class="exp-company">Studio Mega Fury <span class="city">/ Pakistan</span></div>
+            <p>
+              Delivered stylized shaders, combat VFX, and scalable render paths
+              hitting frame budgets across diverse mobile devices. Built artist-friendly
+              editor tools and standardized UI/gameplay animation. Mentored engineers
+              through code reviews and shared libraries.
+            </p>
+          </div>
+        </article>
+
+        <article class="exp-item reveal">
+          <div class="exp-date">
+            <span class="badge muted">archived</span>
+            <span>OCT 2020 — MAY 2021</span>
+          </div>
+          <div class="exp-body">
+            <h4>Game Programmer <span class="role-it">@ Trio Ford Solutions</span></h4>
+            <div class="exp-company">Trio Ford Solutions <span class="city">/ Australia · Remote</span></div>
+            <p>
+              Built modular gameplay and event-driven C# systems with unit tests.
+              Cut load times via profiling and async scene streaming. Added analytics
+              and A/B testing to guide balance and retention decisions across multiple
+              mobile titles.
+            </p>
+          </div>
+        </article>
+
+        <article class="exp-item reveal">
+          <div class="exp-date">
+            <span class="badge muted">archived</span>
+            <span>2017 — 2020</span>
+          </div>
+          <div class="exp-body">
+            <h4>Freelance Unity Developer <span class="role-it">@ various</span></h4>
+            <div class="exp-company">Various Clients <span class="city">/ Remote</span></div>
+            <p>
+              Crafted shaders, post-processing, and rendering pipelines for low-end
+              hardware. Automated import/setup pipelines and authored VFX and animation
+              graphs across multiple game projects.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="page-section" id="projects">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">04</span><span class="tick"></span>Selected work</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Recent <em>builds</em>.
+          </h2>
         </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📱</div>
-          <a href="tel:+4915560428752">+49 15560 428752</a>
+        <p class="lede-sm">
+          Six representative projects across multiplayer, AR, adventure, and survival.
+          The full archive of 90+ projects lives on the next page.
+        </p>
+      </div>
+
+      <div class="projects-wrap">
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">01 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">Multiplayer FPS</span>
+              <span class="year">2023</span>
+            </div>
+            <h3>Line of Control</h3>
+            <p>
+              Multiplayer FPS built on Photon with physically based lighting, modular
+              weapon VFX, recoil systems, and auto-LOD tooling. Optimized for stable
+              frame pacing on mid-range hardware with decals, fog volumes, and URP
+              materials.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>C#</span><span>Photon</span><span>URP</span><span>Networking</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=3QN_avy_Hl0" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-01" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>LOC.V1 · LIVE</span>
+              <iframe src="https://www.youtube.com/embed/3QN_avy_Hl0" title="Line of Control demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">02 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">MMORPG</span>
+              <span class="year">2023</span>
+            </div>
+            <h3>Akrasin MMORPG</h3>
+            <p>
+              Massively multiplayer RPG with quest and dialogue tooling, spell FX,
+              shader-driven fog, animated UI widgets, and designer-friendly Timeline
+              workflows. 200+ concurrent players in test rounds.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>C#</span><span>Multiplayer</span><span>Timeline</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=PA4sbqfedqU" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-02" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>AKRASIN · ONLINE</span>
+              <iframe src="https://www.youtube.com/embed/PA4sbqfedqU" title="Akrasin MMORPG demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">03 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">3D Adventure</span>
+              <span class="year">2022</span>
+            </div>
+            <h3>The Sands of Abzu</h3>
+            <p>
+              Cel-shaded adventure with stylized water, cinematic camera logic,
+              interactable shaders, and puzzle systems driven by Timeline curves.
+              Built solo, end-to-end.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>Cel Shading</span><span>Timeline</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=QQuzqS29sr8" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-03" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>ABZU · BUILD 7</span>
+              <iframe src="https://www.youtube.com/embed/QQuzqS29sr8" title="The Sands of Abzu demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">04 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">AR Experience</span>
+              <span class="year">2024</span>
+            </div>
+            <h3>AR Treasure Hunt</h3>
+            <p>
+              Large-area AR exploration with GPS anchoring, surface detection,
+              responsive outdoor UX, and an event-bus architecture that keeps
+              features modular and testable.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>ARKit</span><span>ARCore</span><span>Addressables</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-04" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>AR.HUNT · GEO</span>
+              <div class="project-media-placeholder">
+                <span class="ph-icon">🗺️</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">05 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">RPG Action</span>
+              <span class="year">2022</span>
+            </div>
+            <h3>Ninja Tashani</h3>
+            <p>
+              3D RPG action game with sword trails, combo VFX, layered animation
+              controllers, blend trees, and a scriptable HUD that scales across
+              widescreen and mobile.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>C#</span><span>Animator</span><span>VFX</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-05" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>TASHANI · 1.0</span>
+              <div class="project-media-placeholder">
+                <span class="ph-icon">🥷</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-row reveal" data-hover>
+          <div class="project-num">06 / 06</div>
+          <div class="project-head">
+            <div class="tag-row">
+              <span class="pill">Survival</span>
+              <span class="year">2023</span>
+            </div>
+            <h3>Dead Island Survival</h3>
+            <p>
+              Multiplayer survival with procedural weather, ECS architecture, runtime
+              lighting tools, biome blending, and designer-ready FX presets that hit
+              frame budget on mid-range Android.
+            </p>
+            <div class="project-tech">
+              <span>Unity3D</span><span>Photon</span><span>ECS</span><span>Procedural</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=3GjJghptq3o" target="_blank" data-hover>↗ Watch demo</a>
+              <a href="projects.html#project-06" data-hover>case study →</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="project-media-frame">
+              <span class="project-media-marker"><span class="dot"></span>D.ISLAND · ECS</span>
+              <iframe src="https://www.youtube.com/embed/3GjJghptq3o" title="Dead Island Survival demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-foot reveal">
+        <div class="projects-count"><strong>90+</strong>&nbsp;&nbsp;projects shipped · 2017 — 2026</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="projects.html" class="btn btn-primary" data-hover>Browse the full archive <span class="arrow">→</span></a>
+          <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="btn btn-ghost" data-hover>Watch on YouTube</a>
         </div>
-        <div style="margin-top: 1.5rem;">
-          <div class="social-row">
-            <a href="https://linkedin.com/in/husnain-haider0" target="_blank">
-              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="page-section" id="education">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">05</span><span class="tick"></span>Education</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Academic <em>background</em>.
+          </h2>
+        </div>
+        <p class="lede-sm">
+          Computer science roots, currently pursuing AI at a German technical
+          university to deepen the engineering side of the engineering / art seam.
+        </p>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-date">2024 — PRESENT</div>
+          <h4>MSc <span class="it">Artificial Intelligence</span></h4>
+          <p>Brandenburg University of Technology · Cottbus, DE</p>
+        </div>
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-date">2017 — 2021</div>
+          <h4>BS <span class="it">Computer Science</span></h4>
+          <p>University of Engineering &amp; Technology · Lahore, PK</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page-section" id="contact">
+    <div class="inner">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-tag"><span class="num">06</span><span class="tick"></span>Contact</span>
+          <h2 class="display-l" style="margin-top:18px;">
+            Let's <em>talk shop</em>.
+          </h2>
+        </div>
+        <p class="lede-sm">
+          Hiring for Unity, XR, or real-time roles? Or just want to nerd out about
+          shader pipelines? Either way — open inbox, fast replies.
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-pitch reveal">
+          <h3>
+            Open to <span class="it">senior</span> Unity / XR roles —
+            <span class="it">Berlin</span> or remote.
+          </h3>
+          <p>
+            I'm looking for teams building immersive products who need a developer
+            who can own systems end-to-end: architecture, performance, native plugins,
+            and the boring-but-vital pipeline glue.
+          </p>
+
+          <div class="contact-channels">
+            <a class="contact-row" href="mailto:hucnen@gmail.com" data-hover>
+              <span class="key">Email</span>
+              <span class="val">hucnen@gmail.com</span>
+              <span class="arr">→</span>
             </a>
-            <a href="https://github.com/husnainhaider" target="_blank">
-              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
+            <a class="contact-row" href="tel:+4915560428752" data-hover>
+              <span class="key">Phone</span>
+              <span class="val">+49 15560 428752</span>
+              <span class="arr">→</span>
             </a>
-            <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">
-              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              YouTube
+            <a class="contact-row" href="https://linkedin.com/in/husnain-haider0" target="_blank" data-hover>
+              <span class="key">LinkedIn</span>
+              <span class="val">/in/husnain-haider0</span>
+              <span class="arr">↗</span>
             </a>
+            <a class="contact-row" href="https://github.com/husnainhaider" target="_blank" data-hover>
+              <span class="key">GitHub</span>
+              <span class="val">@husnainhaider</span>
+              <span class="arr">↗</span>
+            </a>
+            <a class="contact-row" href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>
+              <span class="key">YouTube</span>
+              <span class="val">@Hucnain</span>
+              <span class="arr">↗</span>
+            </a>
+            <div class="contact-row">
+              <span class="key">Based</span>
+              <span class="val">Berlin, Germany</span>
+              <span class="arr">·</span>
+            </div>
           </div>
         </div>
-      </div>
-      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Sent ✓'; this.querySelector('button').style.background='#00D4AA';">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <input type="text" placeholder="Subject (e.g. Unity Developer Role)">
-        <textarea placeholder="Tell me about the role or opportunity..." required></textarea>
-        <button type="submit">Reach Out →</button>
-      </form>
-    </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
+        <div class="contact-form reveal reveal-delay-1">
+          <form class="contact-form-inner">
+            <div>
+              <label for="name">01 / Your name</label>
+              <input id="name" type="text" placeholder="John Carmack" required>
+            </div>
+            <div>
+              <label for="email">02 / Your email</label>
+              <input id="email" type="email" placeholder="you@studio.com" required>
+            </div>
+            <div>
+              <label for="subj">03 / Subject</label>
+              <input id="subj" type="text" placeholder="Senior Unity Developer @ Studio">
+            </div>
+            <div>
+              <label for="msg">04 / Message</label>
+              <textarea id="msg" placeholder="Tell me about the role or the project. Sample work, deadlines, stack — whatever's useful." required></textarea>
+            </div>
+            <button type="submit" data-hover>Transmit signal →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <footer>
-  <div class="container">
-    <div class="footer-links">
-      <a href="https://linkedin.com/in/husnain-haider0" target="_blank">LinkedIn</a>
-      <a href="https://github.com/husnainhaider" target="_blank">GitHub</a>
-      <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">YouTube</a>
-      <a href="mailto:hucnen@gmail.com">Email</a>
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-mark">
+        <span class="it">husnain</span><br>
+        haider<span class="ac">.</span>
+      </div>
+
+      <div class="footer-col">
+        <h5>/ Navigate</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Stack</a></li>
+          <li><a href="#experience">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>/ Channels</h5>
+        <ul>
+          <li><a href="https://linkedin.com/in/husnain-haider0" target="_blank">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/husnainhaider" target="_blank">GitHub ↗</a></li>
+          <li><a href="https://www.youtube.com/@Hucnain/videos" target="_blank">YouTube ↗</a></li>
+          <li><a href="mailto:hucnen@gmail.com">Email ↗</a></li>
+          <li><a href="assets/Resume_Husnain_Haider.pdf" target="_blank">Resume.pdf ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>/ System</h5>
+        <ul>
+          <li>v 4.7.0 · 2026</li>
+          <li>Berlin · CET</li>
+          <li>EN · DE (A2)</li>
+          <li>HSND.<span style="color:var(--accent)">0001</span></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 Husnain Haider. Built with care in Berlin.</p>
+
+    <div class="footer-bottom">
+      <span>© 2026 Husnain Haider — built with care in Berlin</span>
+      <span>Hand-typed HTML / CSS · no frameworks</span>
+    </div>
   </div>
 </footer>
 
-<script>
-// ─── PARTICLE NETWORK ───
-const C = document.getElementById('particles-canvas'), X = C.getContext('2d');
-let P = [], mx = -999, my = -999;
-function resize() { C.width = innerWidth; C.height = innerHeight; }
-resize(); addEventListener('resize', resize);
-class Dot {
-  constructor() { this.r(); }
-  r() { this.x=Math.random()*C.width; this.y=Math.random()*C.height; this.s=Math.random()*1.8+0.5; this.vx=(Math.random()-0.5)*0.25; this.vy=(Math.random()-0.5)*0.25; this.o=Math.random()*0.45+0.1; this.c=Math.random()>0.5?'108,99,255':'0,212,170'; }
-  u() {
-    this.x+=this.vx; this.y+=this.vy;
-    const dx=this.x-mx, dy=this.y-my, d=Math.sqrt(dx*dx+dy*dy);
-    if(d<130){this.x+=dx/d*1.2;this.y+=dy/d*1.2;}
-    if(this.x<0||this.x>C.width||this.y<0||this.y>C.height)this.r();
-  }
-  d() { X.beginPath(); X.arc(this.x,this.y,this.s,0,Math.PI*2); X.fillStyle=`rgba(${this.c},${this.o})`; X.fill(); }
-}
-for(let i=0;i<55;i++)P.push(new Dot());
-function loop(){
-  X.clearRect(0,0,C.width,C.height);
-  P.forEach(p=>{p.u();p.d();});
-  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){
-    const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.sqrt(dx*dx+dy*dy);
-    if(d<140){X.beginPath();X.moveTo(P[i].x,P[i].y);X.lineTo(P[j].x,P[j].y);X.strokeStyle=`rgba(108,99,255,${0.055*(1-d/140)})`;X.lineWidth=0.5;X.stroke();}
-  }
-  requestAnimationFrame(loop);
-}
-loop();
-addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-
-// ─── SCROLL REVEAL ───
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'), i*80); });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ─── NAV SCROLL ───
-const nav = document.querySelector('nav');
-addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
-
-// ─── ACTIVE NAV ───
-const secs = document.querySelectorAll('section[id]');
-const navA = document.querySelectorAll('.nav-links a:not(.nav-resume)');
-addEventListener('scroll', () => {
-  let cur = '';
-  secs.forEach(s => { if(scrollY >= s.offsetTop-100) cur = s.id; });
-  navA.forEach(a => { a.style.color = a.getAttribute('href')==='#'+cur ? 'var(--text)' : ''; });
-});
-
-// ─── CLEAN URLS ───
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    const t = document.querySelector(this.getAttribute('href'));
-    if(t){ t.scrollIntoView({behavior:'smooth'}); setTimeout(()=>history.replaceState(null,'',location.pathname),800); }
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-
-// ─── SKILL CARD SPOTLIGHT ───
-document.querySelectorAll('.skill-card').forEach(c => {
-  c.addEventListener('mousemove', e => {
-    const r=c.getBoundingClientRect();
-    c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
-    c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
-  });
-});
-
-// ─── STAT COUNTER ───
-const statObs = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if(en.isIntersecting){
-      const el=en.target, txt=el.textContent, num=parseInt(txt);
-      if(!isNaN(num)&&!el.dataset.counted){
-        el.dataset.counted='1'; let cur=0;
-        const suf=txt.replace(/[0-9]/g,''), step=Math.max(1,Math.floor(num/30));
-        const t=setInterval(()=>{cur+=step;if(cur>=num){cur=num;clearInterval(t);}el.textContent=cur+suf;},40);
-      }
-    }
-  });
-}, {threshold:0.5});
-document.querySelectorAll('.stat-number').forEach(el=>statObs.observe(el));
-
-// ─── MAGNETIC BUTTONS ───
-document.querySelectorAll('.btn-primary,.btn-secondary').forEach(b => {
-  b.addEventListener('mousemove', e => {
-    const r=b.getBoundingClientRect();
-    b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*0.12}px,${(e.clientY-r.top-r.height/2)*0.12}px)`;
-  });
-  b.addEventListener('mouseleave', ()=>{ b.style.transform=''; });
-});
-
-// ─── PHOTO 3D TILT ───
-const photo = document.querySelector('.about-photo');
-if(photo){
-  photo.addEventListener('mousemove', e => {
-    const r=photo.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-0.5, y=(e.clientY-r.top)/r.height-0.5;
-    photo.style.transform=`perspective(600px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.02)`;
-  });
-  photo.addEventListener('mouseleave', ()=>{ photo.style.transform=''; });
-}
-
-// ─── PARALLAX ON HERO GLOWS ───
-addEventListener('mousemove', e => {
-  const x=(e.clientX/innerWidth-0.5)*20, y=(e.clientY/innerHeight-0.5)*20;
-  document.querySelector('.hero-glow').style.transform=`translate(${x}px,${y}px)`;
-  document.querySelector('.hero-glow-2').style.transform=`translate(${-x*0.7}px,${-y*0.7}px)`;
-});
-</script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
