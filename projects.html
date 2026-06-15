@@ -23,52 +23,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-<div class="grain" aria-hidden="true"></div>
-
-<!-- HUD -->
-<header class="hud" aria-label="System status">
-  <div class="hud-inner">
-    <div class="hud-cell">
-      <span class="hud-dot"></span>
-      <span class="hud-val">SYS:&nbsp;ONLINE</span>
-      <span class="hud-key">/ HSND.4.7</span>
-    </div>
-    <div class="hud-cell hud-ticker">
-      <div class="hud-ticker-track">
-        <span>90+ projects · 2017 — 2026</span>
-        <span>Unity / C# / AR Foundation / Photon / URP</span>
-        <span>Shipped across Mobile, AR, WebGL, PC</span>
-        <span>Available for senior Unity / XR roles</span>
-        <span>90+ projects · 2017 — 2026</span>
-        <span>Unity / C# / AR Foundation / Photon / URP</span>
-        <span>Shipped across Mobile, AR, WebGL, PC</span>
-        <span>Available for senior Unity / XR roles</span>
-      </div>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-key">SEC:</span>
-      <span class="hud-val">ARCHIVE</span>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-key">UP:</span>
-      <span class="hud-val" data-uptime>00:00</span>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-val" data-clock>00:00:00 UTC</span>
-    </div>
-    <span class="hud-progress" data-progress></span>
-  </div>
-</header>
-
-<!-- Nav -->
 <nav class="nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
@@ -92,17 +52,8 @@
   </div>
 </nav>
 
-<!-- Side rails -->
-<aside class="rail rail-l" aria-hidden="true">
-  <span class="rail-text">Archive · 90+ titles · 2017–2026</span>
-</aside>
-<aside class="rail rail-r" aria-hidden="true">
-  <span class="rail-text">Browse / Filter / Watch</span>
-</aside>
-
 <main>
-  <!-- Archive hero -->
-  <section class="page-section archive-hero">
+  <section class="archive-hero">
     <div class="inner">
       <span class="section-tag reveal"><span class="num">00</span><span class="tick"></span>Project archive</span>
       <h1 class="reveal">
@@ -128,15 +79,13 @@
     </div>
   </section>
 
-  <!-- Archive grid -->
-  <section class="page-section" style="padding-top:0;" id="archive">
+  <section style="padding: 0 var(--pagepad) 96px;" id="archive">
     <div class="inner">
       <div id="archiveGrid" class="archive-grid"></div>
     </div>
   </section>
 </main>
 
-<!-- Footer -->
 <footer>
   <div class="inner">
     <div class="footer-grid">
@@ -168,7 +117,6 @@
           <li>v 4.7.0 · 2026</li>
           <li>Berlin · CET</li>
           <li>EN · DE (A2)</li>
-          <li>HSND.<span style="color:var(--accent)">0001</span></li>
         </ul>
       </div>
     </div>
@@ -190,24 +138,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function render(list) {
     grid.innerHTML = list.map((p) => {
-      const num = String(projects.indexOf(p) + 1).padStart(3, '0');
+      const idx = projects.indexOf(p);
+      const num = String(idx + 1).padStart(3, '0');
       const hasVideo = !!p.videoId;
-      const preview = hasVideo
-        ? `<span class="preview-tag"><span class="dot"></span>${p.tag}</span>
-           <iframe src="https://www.youtube.com/embed/${p.videoId}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
-        : `<span class="preview-tag"><span class="dot"></span>${p.tag}</span>
-           <div class="ph"><span>${p.icon || '🎮'}</span></div>`;
       const watch = p.ytLink || 'https://www.youtube.com/@Hucnain/videos';
+
+      const preview = hasVideo
+        ? `<span class="preview-tag">${p.tag}</span>
+           <a href="${watch}" target="_blank" aria-label="Watch ${p.title}" style="display:block; width:100%; height:100%;">
+             <img src="https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg" alt="${p.title} thumbnail" loading="lazy">
+             <span class="play" aria-hidden="true">▶</span>
+           </a>`
+        : `<span class="preview-tag">${p.tag}</span>
+           <div class="ph"><span>${p.icon || '🎮'}</span></div>`;
+
       return `
-        <article class="archive-card" id="project-${String(projects.indexOf(p) + 1).padStart(2,'0')}" data-tag="${p.tag}" data-tech="${p.tech.join(',')}">
+        <article class="archive-card" id="project-${String(idx + 1).padStart(2,'0')}" data-tag="${p.tag}" data-tech="${p.tech.join(',')}">
           <span class="num">${num} / ${String(total).padStart(3, '0')}</span>
           <div class="preview">${preview}</div>
           <h2>${p.title}</h2>
           <p>${p.desc}</p>
           <div class="tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
           <div class="card-links">
-            <a href="${watch}" target="_blank" data-hover>↗ Watch</a>
-            <a href="index.html" data-hover>← Home</a>
+            <a href="${watch}" target="_blank">↗ Watch</a>
+            <a href="index.html">← Home</a>
           </div>
         </article>`;
     }).join('');
@@ -215,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
   render(projects);
   document.getElementById('filterCount').textContent = total;
 
-  // Filtering
   const matchers = {
     all:          () => true,
     MULTIPLAYER:  p => /MULTIPLAYER|MMORPG|CO-OP|NETWORK/i.test(p.tag) || /Multiplayer|Photon|Netcode/i.test(p.tech.join(' ')),
@@ -231,16 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const key = btn.dataset.filter;
-      const m   = matchers[key] || matchers.all;
+      const m = matchers[key] || matchers.all;
       const filtered = projects.filter(m);
       render(filtered);
       document.getElementById('filterCount').textContent = filtered.length;
     });
   });
-
-  // Re-trigger reveal observer for newly inserted cards (they don't need it,
-  // they're below the viewport on load and just appear, but if we want
-  // them animated we can opt in)
 });
 </script>
 </body>

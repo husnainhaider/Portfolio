@@ -54,57 +54,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-<!-- Custom cursor -->
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<!-- Grain overlay -->
-<div class="grain" aria-hidden="true"></div>
-
-<!-- HUD top bar -->
-<header class="hud" aria-label="System status">
-  <div class="hud-inner">
-    <div class="hud-cell">
-      <span class="hud-dot"></span>
-      <span class="hud-val">SYS:&nbsp;ONLINE</span>
-      <span class="hud-key">/ HSND.4.7</span>
-    </div>
-    <div class="hud-cell hud-ticker">
-      <div class="hud-ticker-track">
-        <span>Available for senior Unity / XR roles — Berlin or remote</span>
-        <span>Building WebAR at Zaubar</span>
-        <span>MSc AI · Brandenburg University of Technology</span>
-        <span>6+ years shipping real-time systems</span>
-        <span>Photon · ARKit · OpenXR · URP · ECS</span>
-        <span>Available for senior Unity / XR roles — Berlin or remote</span>
-        <span>Building WebAR at Zaubar</span>
-        <span>MSc AI · Brandenburg University of Technology</span>
-        <span>6+ years shipping real-time systems</span>
-        <span>Photon · ARKit · OpenXR · URP · ECS</span>
-      </div>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-key">SEC:</span>
-      <span class="hud-val" data-section>HERO</span>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-key">UP:</span>
-      <span class="hud-val" data-uptime>00:00</span>
-    </div>
-    <div class="hud-cell">
-      <span class="hud-val" data-clock>00:00:00 UTC</span>
-    </div>
-    <span class="hud-progress" data-progress></span>
-  </div>
-</header>
-
-<!-- Secondary nav -->
+<!-- Nav -->
 <nav class="nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="#" class="nav-brand" aria-label="Husnain Haider — Home">
@@ -128,116 +84,18 @@
   </div>
 </nav>
 
-<!-- Side rails (decorative) -->
-<aside class="rail rail-l" aria-hidden="true">
-  <span class="rail-text">Hsnd / Portfolio · 2026 · v4.7</span>
-</aside>
-<aside class="rail rail-r" aria-hidden="true">
-  <span class="rail-text">Berlin · 52.52° N · 13.40° E</span>
-</aside>
-
 <main>
 
-  <!-- HERO -->
-  <section class="page-section hero" id="hero" style="padding-bottom: 56px;">
-    <div class="inner hero-inner">
-
-      <div class="hero-left">
-        <div class="hero-meta-top">
-          <span class="hero-status"><span class="dot"></span>Available · Open to opportunities</span>
-          <span class="hero-meta-spacer"></span>
-          <span class="hero-coord">52.5200°N&nbsp;&nbsp;13.4050°E</span>
-        </div>
-
-        <h1>
-          <span class="line">Real-time</span>
-          <span class="line"><span class="ink-it">systems &amp;</span></span>
-          <span class="line"><span class="underline-wrap">immersive</span></span>
-          <span class="line accent">worlds.</span>
-        </h1>
-
-        <p class="hero-cap">
-          I'm <strong>Husnain Haider</strong> — a Unity &amp; XR developer
-          <span class="italic">shipping games, AR experiences,</span>
-          and <span class="italic">real-time tools</span> from Berlin.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary" data-hover>Selected work <span class="arrow">→</span></a>
-          <a href="#contact" class="btn btn-ghost" data-hover>Start a conversation</a>
-        </div>
-      </div>
-
-      <aside class="hero-panel reveal">
-        <span class="hero-panel-title">ID.0001 — operator</span>
-        <div class="hero-photo-wrap">
-          <div class="hero-photo">
-            <img src="assets/photo.jpg" alt="Husnain Haider portrait" loading="eager">
-            <span class="hero-photo-frame-marks"></span>
-          </div>
-        </div>
-        <dl class="hero-meta-list">
-          <dt>Name</dt>     <dd>Husnain Haider</dd>
-          <dt>Class</dt>    <dd>Unity / XR Developer</dd>
-          <dt>Studio</dt>   <dd><span class="accent">Zaubar</span> · Berlin</dd>
-          <dt>Years</dt>    <dd>06+</dd>
-          <dt>Stack</dt>    <dd>C# · Unity · ARKit · Photon</dd>
-          <dt>Now</dt>      <dd>MSc AI @ BTU</dd>
-        </dl>
-      </aside>
-
-    </div>
-  </section>
-
-  <!-- Tech-stack marquee -->
-  <div class="stack-marquee" aria-hidden="true">
-    <div class="stack-marquee-track">
-      <span>Unity3D</span><span class="dot-sep">◆</span>
-      <span>C#</span><span class="dot-sep">◆</span>
-      <span>AR Foundation</span><span class="dot-sep">◆</span>
-      <span>OpenXR</span><span class="dot-sep">◆</span>
-      <span>Shader Graph</span><span class="dot-sep">◆</span>
-      <span>Photon</span><span class="dot-sep">◆</span>
-      <span>URP</span><span class="dot-sep">◆</span>
-      <span>ECS</span><span class="dot-sep">◆</span>
-      <span>WebGL</span><span class="dot-sep">◆</span>
-      <span>Vision Pro</span><span class="dot-sep">◆</span>
-      <span>Blender</span><span class="dot-sep">◆</span>
-      <span>TypeScript</span><span class="dot-sep">◆</span>
-      <span>Unity3D</span><span class="dot-sep">◆</span>
-      <span>C#</span><span class="dot-sep">◆</span>
-      <span>AR Foundation</span><span class="dot-sep">◆</span>
-      <span>OpenXR</span><span class="dot-sep">◆</span>
-      <span>Shader Graph</span><span class="dot-sep">◆</span>
-      <span>Photon</span><span class="dot-sep">◆</span>
-      <span>URP</span><span class="dot-sep">◆</span>
-      <span>ECS</span><span class="dot-sep">◆</span>
-      <span>WebGL</span><span class="dot-sep">◆</span>
-      <span>Vision Pro</span><span class="dot-sep">◆</span>
-      <span>Blender</span><span class="dot-sep">◆</span>
-      <span>TypeScript</span><span class="dot-sep">◆</span>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="page-section" id="about">
+  <!-- ABOUT (now the first section) -->
+  <section class="page-section first-section" id="about">
     <div class="inner">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-tag"><span class="num">01</span><span class="tick"></span>About</span>
-          <h2 class="display-l" style="margin-top:18px;">
-            Building <em>real-time</em><br>systems &amp; <em>immersive</em><br>experiences.
-          </h2>
-        </div>
-        <p class="lede-sm">
-          Six years of Unity, C#, and a healthy obsession with frame budgets,
-          modular architecture, and the quiet satisfaction of shipping things
-          that actually run on a phone.
-        </p>
-      </div>
+      <span class="section-tag reveal"><span class="num">01</span><span class="tick"></span>About</span>
 
-      <div class="about-grid">
-        <div class="about-body reveal">
+      <div class="about-grid reveal">
+        <div class="about-body">
+          <h2 class="about-title">
+            Building <em>real-time</em> systems &amp; <em>immersive</em> experiences.
+          </h2>
           <p>
             I'm a <strong>Unity &amp; XR Developer</strong> with six-plus years building
             everything from <span class="italic-i">multiplayer FPS</span> to
@@ -257,20 +115,23 @@
             profiler open and a build to ship.
           </p>
         </div>
+        <div class="about-photo">
+          <img src="assets/photo.jpg" alt="Husnain Haider portrait" loading="lazy">
+        </div>
+      </div>
 
-        <div class="stats-grid reveal reveal-delay-1">
-          <div class="stat">
-            <div class="stat-num">06<span class="plus">+</span></div>
-            <div class="stat-label">Years shipping</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">90<span class="plus">+</span></div>
-            <div class="stat-label">Projects delivered</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">MSc</div>
-            <div class="stat-label">AI · in progress</div>
-          </div>
+      <div class="stats-grid reveal">
+        <div class="stat">
+          <div class="stat-num">06<span class="plus">+</span></div>
+          <div class="stat-label">Years shipping</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">90<span class="plus">+</span></div>
+          <div class="stat-label">Projects delivered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">MSc</div>
+          <div class="stat-label">AI · in progress</div>
         </div>
       </div>
     </div>
@@ -361,14 +222,10 @@
             Where I've <em>built things</em>.
           </h2>
         </div>
-        <p class="lede-sm">
-          From Pakistan to Berlin via remote-only contracts. A loose history of the studios
-          and the things I shipped while I was there.
-        </p>
+       
       </div>
 
       <div class="exp-list">
-
         <article class="exp-item reveal">
           <div class="exp-date">
             <span class="badge">▶ current</span>
@@ -398,7 +255,6 @@
               Built AR industrial applications using URP shaders, robust lighting,
               and ARKit/ARCore fallbacks. Wrote Unity editor tools for asset alignment
               and anchor debugging. Profiled CPU/GPU and memory to cut frame costs.
-              Streamlined Blender → Unity pipeline with Addressables.
             </p>
           </div>
         </article>
@@ -414,8 +270,7 @@
             <p>
               Delivered stylized shaders, combat VFX, and scalable render paths
               hitting frame budgets across diverse mobile devices. Built artist-friendly
-              editor tools and standardized UI/gameplay animation. Mentored engineers
-              through code reviews and shared libraries.
+              editor tools and standardized UI/gameplay animation. Mentored engineers.
             </p>
           </div>
         </article>
@@ -431,8 +286,7 @@
             <p>
               Built modular gameplay and event-driven C# systems with unit tests.
               Cut load times via profiling and async scene streaming. Added analytics
-              and A/B testing to guide balance and retention decisions across multiple
-              mobile titles.
+              and A/B testing to guide balance and retention decisions.
             </p>
           </div>
         </article>
@@ -452,7 +306,6 @@
             </p>
           </div>
         </article>
-
       </div>
     </div>
   </section>
@@ -475,182 +328,175 @@
 
       <div class="projects-wrap">
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">01 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">Multiplayer FPS</span>
-              <span class="year">2023</span>
+              <span class="pill">Multiplayer FPS</span><span class="year">2023</span>
             </div>
             <h3>Line of Control</h3>
             <p>
-              Multiplayer FPS built on Photon with physically based lighting, modular
-              weapon VFX, recoil systems, and auto-LOD tooling. Optimized for stable
-              frame pacing on mid-range hardware with decals, fog volumes, and URP
-              materials.
+              Multiplayer FPS on Photon with PBR lighting, modular weapon VFX, recoil
+              systems, and auto-LOD tooling. Optimized for stable frame pacing on
+              mid-range hardware.
             </p>
             <div class="project-tech">
-              <span>Unity3D</span><span>C#</span><span>Photon</span><span>URP</span><span>Networking</span>
+              <span>Unity3D</span><span>C#</span><span>Photon</span><span>URP</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=3QN_avy_Hl0" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-01" data-hover>case study →</a>
+              <a href="https://www.youtube.com/watch?v=3QN_avy_Hl0" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-01">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>LOC.V1 · LIVE</span>
-              <iframe src="https://www.youtube.com/embed/3QN_avy_Hl0" title="Line of Control demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/watch?v=3QN_avy_Hl0" target="_blank" aria-label="Watch Line of Control demo">
+              <span class="project-thumb-tag">LOC · live</span>
+              <img src="https://img.youtube.com/vi/3QN_avy_Hl0/hqdefault.jpg" alt="Line of Control thumbnail" loading="lazy">
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
           </div>
         </article>
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">02 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">MMORPG</span>
-              <span class="year">2023</span>
+              <span class="pill">MMORPG</span><span class="year">2023</span>
             </div>
             <h3>Akrasin MMORPG</h3>
             <p>
               Massively multiplayer RPG with quest and dialogue tooling, spell FX,
-              shader-driven fog, animated UI widgets, and designer-friendly Timeline
-              workflows. 200+ concurrent players in test rounds.
+              shader-driven fog, and designer-friendly Timeline workflows. 200+
+              concurrent players in test rounds.
             </p>
             <div class="project-tech">
               <span>Unity3D</span><span>C#</span><span>Multiplayer</span><span>Timeline</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=PA4sbqfedqU" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-02" data-hover>case study →</a>
+              <a href="https://www.youtube.com/watch?v=PA4sbqfedqU" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-02">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>AKRASIN · ONLINE</span>
-              <iframe src="https://www.youtube.com/embed/PA4sbqfedqU" title="Akrasin MMORPG demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/watch?v=PA4sbqfedqU" target="_blank" aria-label="Watch Akrasin MMORPG demo">
+              <span class="project-thumb-tag">Akrasin · online</span>
+              <img src="https://img.youtube.com/vi/PA4sbqfedqU/hqdefault.jpg" alt="Akrasin MMORPG thumbnail" loading="lazy">
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
           </div>
         </article>
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">03 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">3D Adventure</span>
-              <span class="year">2022</span>
+              <span class="pill">3D Adventure</span><span class="year">2022</span>
             </div>
             <h3>The Sands of Abzu</h3>
             <p>
               Cel-shaded adventure with stylized water, cinematic camera logic,
               interactable shaders, and puzzle systems driven by Timeline curves.
-              Built solo, end-to-end.
+              Built end-to-end.
             </p>
             <div class="project-tech">
               <span>Unity3D</span><span>Cel Shading</span><span>Timeline</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=QQuzqS29sr8" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-03" data-hover>case study →</a>
+              <a href="https://www.youtube.com/watch?v=QQuzqS29sr8" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-03">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>ABZU · BUILD 7</span>
-              <iframe src="https://www.youtube.com/embed/QQuzqS29sr8" title="The Sands of Abzu demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/watch?v=QQuzqS29sr8" target="_blank" aria-label="Watch The Sands of Abzu demo">
+              <span class="project-thumb-tag">Abzu · build 7</span>
+              <img src="https://img.youtube.com/vi/QQuzqS29sr8/hqdefault.jpg" alt="The Sands of Abzu thumbnail" loading="lazy">
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
           </div>
         </article>
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">04 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">AR Experience</span>
-              <span class="year">2024</span>
+              <span class="pill">AR Experience</span><span class="year">2024</span>
             </div>
             <h3>AR Treasure Hunt</h3>
             <p>
               Large-area AR exploration with GPS anchoring, surface detection,
               responsive outdoor UX, and an event-bus architecture that keeps
-              features modular and testable.
+              features modular.
             </p>
             <div class="project-tech">
               <span>Unity3D</span><span>ARKit</span><span>ARCore</span><span>Addressables</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-04" data-hover>case study →</a>
+              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-04">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>AR.HUNT · GEO</span>
-              <div class="project-media-placeholder">
-                <span class="ph-icon">🗺️</span>
-              </div>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/@Hucnain/videos" target="_blank" aria-label="Watch AR Treasure Hunt demo">
+              <span class="project-thumb-tag">AR.Hunt · geo</span>
+              <div class="project-placeholder">🗺️</div>
+            </a>
           </div>
         </article>
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">05 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">RPG Action</span>
-              <span class="year">2022</span>
+              <span class="pill">RPG Action</span><span class="year">2022</span>
             </div>
             <h3>Ninja Tashani</h3>
             <p>
               3D RPG action game with sword trails, combo VFX, layered animation
-              controllers, blend trees, and a scriptable HUD that scales across
-              widescreen and mobile.
+              controllers, blend trees, and a scriptable HUD that scales from
+              widescreen to mobile.
             </p>
             <div class="project-tech">
               <span>Unity3D</span><span>C#</span><span>Animator</span><span>VFX</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-05" data-hover>case study →</a>
+              <a href="https://www.youtube.com/@Hucnain/videos" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-05">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>TASHANI · 1.0</span>
-              <div class="project-media-placeholder">
-                <span class="ph-icon">🥷</span>
-              </div>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/@Hucnain/videos" target="_blank" aria-label="Watch Ninja Tashani demo">
+              <span class="project-thumb-tag">Tashani · 1.0</span>
+              <div class="project-placeholder">🥷</div>
+            </a>
           </div>
         </article>
 
-        <article class="project-row reveal" data-hover>
+        <article class="project-row reveal">
           <div class="project-num">06 / 06</div>
           <div class="project-head">
             <div class="tag-row">
-              <span class="pill">Survival</span>
-              <span class="year">2023</span>
+              <span class="pill">Survival</span><span class="year">2023</span>
             </div>
             <h3>Dead Island Survival</h3>
             <p>
               Multiplayer survival with procedural weather, ECS architecture, runtime
-              lighting tools, biome blending, and designer-ready FX presets that hit
-              frame budget on mid-range Android.
+              lighting tools, biome blending, and designer-ready FX presets at frame
+              budget on mid-range Android.
             </p>
             <div class="project-tech">
               <span>Unity3D</span><span>Photon</span><span>ECS</span><span>Procedural</span>
             </div>
             <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=3GjJghptq3o" target="_blank" data-hover>↗ Watch demo</a>
-              <a href="projects.html#project-06" data-hover>case study →</a>
+              <a href="https://www.youtube.com/watch?v=3GjJghptq3o" target="_blank">↗ Watch demo</a>
+              <a href="projects.html#project-06">case study →</a>
             </div>
           </div>
           <div class="project-media">
-            <div class="project-media-frame">
-              <span class="project-media-marker"><span class="dot"></span>D.ISLAND · ECS</span>
-              <iframe src="https://www.youtube.com/embed/3GjJghptq3o" title="Dead Island Survival demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
+            <a class="project-thumb" href="https://www.youtube.com/watch?v=3GjJghptq3o" target="_blank" aria-label="Watch Dead Island Survival demo">
+              <span class="project-thumb-tag">D.Island · ECS</span>
+              <img src="https://img.youtube.com/vi/3GjJghptq3o/hqdefault.jpg" alt="Dead Island Survival thumbnail" loading="lazy">
+              <span class="play" aria-hidden="true">▶</span>
+            </a>
           </div>
         </article>
 
@@ -659,8 +505,8 @@
       <div class="projects-foot reveal">
         <div class="projects-count"><strong>90+</strong>&nbsp;&nbsp;projects shipped · 2017 — 2026</div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="projects.html" class="btn btn-primary" data-hover>Browse the full archive <span class="arrow">→</span></a>
-          <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="btn btn-ghost" data-hover>Watch on YouTube</a>
+          <a href="projects.html" class="btn btn-primary">Full archive <span class="arrow">→</span></a>
+          <a href="https://www.youtube.com/@Hucnain/videos" target="_blank" class="btn btn-ghost">Watch on YouTube</a>
         </div>
       </div>
     </div>
@@ -726,35 +572,23 @@
           </p>
 
           <div class="contact-channels">
-            <a class="contact-row" href="mailto:hucnen@gmail.com" data-hover>
-              <span class="key">Email</span>
-              <span class="val">hucnen@gmail.com</span>
-              <span class="arr">→</span>
+            <a class="contact-row" href="mailto:hucnen@gmail.com">
+              <span class="key">Email</span><span class="val">hucnen@gmail.com</span><span class="arr">→</span>
             </a>
-            <a class="contact-row" href="tel:+4915560428752" data-hover>
-              <span class="key">Phone</span>
-              <span class="val">+49 15560 428752</span>
-              <span class="arr">→</span>
+            <a class="contact-row" href="tel:+4915560428752">
+              <span class="key">Phone</span><span class="val">+49 15560 428752</span><span class="arr">→</span>
             </a>
-            <a class="contact-row" href="https://linkedin.com/in/husnain-haider0" target="_blank" data-hover>
-              <span class="key">LinkedIn</span>
-              <span class="val">/in/husnain-haider0</span>
-              <span class="arr">↗</span>
+            <a class="contact-row" href="https://linkedin.com/in/husnain-haider0" target="_blank">
+              <span class="key">LinkedIn</span><span class="val">/in/husnain-haider0</span><span class="arr">↗</span>
             </a>
-            <a class="contact-row" href="https://github.com/husnainhaider" target="_blank" data-hover>
-              <span class="key">GitHub</span>
-              <span class="val">@husnainhaider</span>
-              <span class="arr">↗</span>
+            <a class="contact-row" href="https://github.com/husnainhaider" target="_blank">
+              <span class="key">GitHub</span><span class="val">@husnainhaider</span><span class="arr">↗</span>
             </a>
-            <a class="contact-row" href="https://www.youtube.com/@Hucnain/videos" target="_blank" data-hover>
-              <span class="key">YouTube</span>
-              <span class="val">@Hucnain</span>
-              <span class="arr">↗</span>
+            <a class="contact-row" href="https://www.youtube.com/@Hucnain/videos" target="_blank">
+              <span class="key">YouTube</span><span class="val">@Hucnain</span><span class="arr">↗</span>
             </a>
             <div class="contact-row">
-              <span class="key">Based</span>
-              <span class="val">Berlin, Germany</span>
-              <span class="arr">·</span>
+              <span class="key">Based</span><span class="val">Berlin, Germany</span><span class="arr">·</span>
             </div>
           </div>
         </div>
@@ -775,9 +609,9 @@
             </div>
             <div>
               <label for="msg">04 / Message</label>
-              <textarea id="msg" placeholder="Tell me about the role or the project. Sample work, deadlines, stack — whatever's useful." required></textarea>
+              <textarea id="msg" placeholder="Tell me about the role or the project — stack, deadlines, whatever's useful." required></textarea>
             </div>
-            <button type="submit" data-hover>Transmit signal →</button>
+            <button type="submit">Transmit signal →</button>
           </form>
         </div>
       </div>
@@ -822,7 +656,6 @@
           <li>v 4.7.0 · 2026</li>
           <li>Berlin · CET</li>
           <li>EN · DE (A2)</li>
-          <li>HSND.<span style="color:var(--accent)">0001</span></li>
         </ul>
       </div>
     </div>
