@@ -134,26 +134,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('archiveGrid');
   if (!grid || typeof projects === 'undefined') return;
 
-  const total = projects.length;
+  // Sort: projects with a video come first, preserve original order within each group
+  const sorted = [...projects].sort((a, b) => {
+    const av = !!a.videoId;
+    const bv = !!b.videoId;
+    if (av === bv) return 0;
+    return av ? -1 : 1;
+  });
+  const total = sorted.length;
 
   function render(list) {
     grid.innerHTML = list.map((p) => {
-      const idx = projects.indexOf(p);
-      const num = String(idx + 1).padStart(3, '0');
+      const sortedIdx = sorted.indexOf(p);
+      const originalIdx = projects.indexOf(p);
+      const num = String(sortedIdx + 1).padStart(3, '0');
+      const cardId = `project-${String(originalIdx + 1).padStart(2, '0')}`;
       const hasVideo = !!p.videoId;
       const watch = p.ytLink || 'https://www.youtube.com/@Hucnain/videos';
 
       const preview = hasVideo
-        ? `<span class="preview-tag">${p.tag}</span>
-           <a href="${watch}" target="_blank" aria-label="Watch ${p.title}" style="display:block; width:100%; height:100%;">
+        ? `<span class="preview-tag"><span class="dot"></span>${p.tag}</span>
+           <a class="preview-link" href="${watch}" data-video="${p.videoId}" target="_blank" aria-label="Play ${p.title}">
              <img src="https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg" alt="${p.title} thumbnail" loading="lazy">
              <span class="play" aria-hidden="true">▶</span>
            </a>`
-        : `<span class="preview-tag">${p.tag}</span>
+        : `<span class="preview-tag"><span class="dot"></span>${p.tag}</span>
            <div class="ph"><span>${p.icon || '🎮'}</span></div>`;
 
       return `
-        <article class="archive-card" id="project-${String(idx + 1).padStart(2,'0')}" data-tag="${p.tag}" data-tech="${p.tech.join(',')}">
+        <article class="archive-card" id="${cardId}" data-tag="${p.tag}" data-tech="${p.tech.join(',')}">
           <span class="num">${num} / ${String(total).padStart(3, '0')}</span>
           <div class="preview">${preview}</div>
           <h2>${p.title}</h2>
@@ -165,8 +174,27 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </article>`;
     }).join('');
+
+    // Wire up inline-play for newly-rendered cards
+    grid.querySelectorAll('.preview-link[data-video]').forEach(link => {
+      link.addEventListener('click', e => {
+        if (link.classList.contains('playing')) return;
+        const id = link.dataset.video;
+        if (!id) return;
+        e.preventDefault();
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+        iframe.title = link.getAttribute('aria-label') || 'Project video';
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.cssText = 'width:100%; height:100%; border:0; display:block;';
+        link.innerHTML = '';
+        link.appendChild(iframe);
+        link.classList.add('playing');
+      });
+    });
   }
-  render(projects);
+  render(sorted);
   document.getElementById('filterCount').textContent = total;
 
   const matchers = {
@@ -185,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const key = btn.dataset.filter;
       const m = matchers[key] || matchers.all;
-      const filtered = projects.filter(m);
+      const filtered = sorted.filter(m);
       render(filtered);
       document.getElementById('filterCount').textContent = filtered.length;
     });
