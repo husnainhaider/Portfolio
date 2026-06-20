@@ -267,9 +267,38 @@ em { font-style: italic; color: var(--ink-dim); font-weight: 400; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin-bottom: 56px;
+  margin-bottom: 88px;
   align-items: start;
 }
+
+/* Social link pills under the about copy */
+.about-links {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--rule-strong);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: transform 0.2s var(--ease), border-color 0.2s, color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.about-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--rule-2);
+}
+.about-links .arr { transition: transform 0.2s var(--ease); display: inline-block; }
+.about-links a:hover .arr { transform: translate(2px, -2px); }
 @media (min-width: 880px) {
   .about-grid {
     grid-template-columns: minmax(0, 1fr) 440px;
